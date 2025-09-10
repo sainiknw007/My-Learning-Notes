@@ -1,0 +1,84 @@
+Docker:
+
+with docker you are able to run each component in a separate container with its own libraries and its own dependencies all on the same VM,
+and the OS but within separate container.	
+
+just build the docker configuration once and all our developers/devops could now get started with a simple docker run command.
+
+What can Containers do ?
+
+Containerize applications
+run each service with its own dependencies in separate containers.
+
+What are containers ? 
+
+Containers are completely isolated environments.
+they have their own processes or services.
+their own networking interface
+their own mounts.
+
+Except they all share the same operating system Kernel.
+
+Containers have existed for about 10 years now and some of the different types of containers are:
+
+LXC
+LXD
+LXCFS etc.
+
+Docker utilises LXC containers.
+
+Setting up these containers environment as they are very low level and that is where Docker offers a high level tool with
+several powerful functions making it realy easy for end users like us.
+
+How Dockers Works ?
+
+Let us revisit some basics concepts of Operating System:
+
+OS like ubuntu, fedora, suse, or centOS, they all consist of two things:
+
+1).An OS Kernel and
+2). a set of sofwares.
+
+OS Kernel provide an interface between computer application/process/software and hardware.
+OS Kernel is same in Linux, there are different softwares that make the OS different like ubuntu, centos.
+
+these software are:
+different user interface
+drivers
+compilers
+file managers,
+developer tools etc.
+
+So there is a Common Linux Kernel across all operating systems and custom softwares that differentiate from one os form  to other.
+
+Docker Container share the underlying Kernel ? what it means ?
+
+Ans: 
+
+Lets say we have a system OS - ubuntu and docker installed on it.
+Docker can run on any flavor of OS on top of it as long as they all based on the same kernel.
+in this case it is Linux system/OS. 
+
+if the underlying operating system is Ubuntu, docker can run a container based on another distribution like Debian, Fedora, Suse, or centOS.
+why because OS Kernel is same in Linux, these are different softwares that make the OS different like ubuntu, centos.
+OS Kernel is same in Linux, these are different softwares that make the OS different like ubuntu, centos.
+
+and Docker utilizes the underlying Kernel of docker host, hence docker container can run on all Linux OS.
+
+What is an OS that did not share the same kernel ?
+is Windows
+
+Hence, you will not bel able to run a windows based container on a docker host with Linux on it.
+For that you need docker on a windows server.
+
+Main Purpose of docker is to containerize applications and to ship them and run anywhere any time as you want.
+
+
+
+
+
+
+ 
+
+
+

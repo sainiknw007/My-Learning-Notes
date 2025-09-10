@@ -1,0 +1,28 @@
+Command Types:
+
+1). Internal or built-in commands: 
+Internal commands are part for shell itself.
+There are in total 35 such commands.
+
+Command Internal commands:
+
+cd- which stands for change directory
+mkdir - which stands for make directory. this command is used to create a directory.
+pwd - print present working directory path.
+export
+set - et cetera.(etc)
+
+2).External commands: 
+External commands are binary programs or scripts which are usually located in distinct files in the system.
+External commands either come pre-installed with the distributions package manager or can be created or installed by the user.
+
+These managers typically pull packages from a central repository maintained by the distribution.
+
+To determine if a command is internal or external command, use the "type" command. 
+
+Example:
+type echo
+echo is a shell built-in
+
+type mv
+MV is an external command.

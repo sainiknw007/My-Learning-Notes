@@ -1,0 +1,56 @@
+🔹 What is a Proxy Server?
+
+A proxy server is like a middleman between your computer (client) and the internet.
+
+When you request a website → your request goes first to the proxy server.
+
+The proxy server forwards the request to the internet → brings back the data → sends it to you.
+
+👉 So your computer doesn’t directly connect to the target website, it goes through the proxy.
+
+🔹 Why is a Proxy Server Used?
+✅ 1. Privacy & Anonymity
+
+Hides your real IP address.
+
+Websites see the proxy’s IP, not yours.
+
+Used for browsing securely and protecting identity.
+
+✅ 2. Access Control & Monitoring
+
+Organizations use proxies to control employee/student internet use.
+
+Can block websites (e.g., social media, gaming).
+
+Can log browsing activity for auditing.
+
+✅ 3. Bypass Restrictions
+
+Helps access geo-blocked content (like watching US-only content from India).
+
+Helps bypass firewall restrictions in some cases.
+
+✅ 4. Performance (Caching)
+
+Proxies can store (cache) frequently accessed websites.
+
+Next time, they serve data faster without going to the internet again.
+
+Saves bandwidth.
+
+✅ 5. Security
+
+Acts as a shield between users and external servers.
+
+Can filter malicious content before it reaches users.
+
+Some proxies even provide encryption for secure communication.
+
+🔹 Simple Analogy
+
+Imagine you want to ask a question to a teacher but don’t want them to know you asked.
+
+You tell your friend (proxy) → your friend asks the teacher → brings back the answer → gives it to you.
+
+The teacher only knows your friend asked, not you.

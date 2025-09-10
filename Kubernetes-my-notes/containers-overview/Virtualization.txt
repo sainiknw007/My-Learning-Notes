@@ -1,0 +1,54 @@
+In case of Virtul machine and virtulization:
+
+we have an Hardware infrastructure 
+OS installed on the hardware infra that is host operating system.
+
+then hypervisor like ESX or virtulization of some kind.
+
+and then virtual machine,,
+
+Each virtual machine has its own Guest OS on it.
+
+In virtualisation there is higher utilization of resources. 
+The Virtual machine consumes higher disk space as each VM is heavy and is usually in Gigabytes in Size.
+
+Docker container are lightweight and docker container are usually in Megabytes in size.
+This allows Docker container to boot up in seconds. Whereas we know VM takes times to bootup and 
+as it needs to boot up entire operating system.
+
+Docker has less isolation as more resources are shared in container like Kernel. (OS Kernel is shared b/w all the container on one docker host).
+Where VMs are completed isolation from each other as they do not reply on OS. each vm has its own VM.
+
+Earlier we provisioned number of VMs, like for each application .
+VMs for Web Server
+Vms for Database server
+VMs for backend server
+
+Now we configure a virtual machine to host hundreds of thousands of docker containers.
+
+
++------------------------------------------------------------+
+|                  🖥️  Hardware Infrastructure               |
+|        (CPU, RAM, Disk, Network - Physical or Virtual)     |
++------------------------------------------------------------+
+|                        🧰 Host Operating System             |
+|               (Installed on the hardware infrastructure)   |
++------------------------------------------------------------+
+|                      🧱 Hypervisor Layer                   |
+|   (Type 2: Installed on OS, or Type 1: Bare-metal variant) |
+|   - Manages virtual machines                               |
+|   - Allocates resources (CPU, memory, etc.)                |
++------------------------------------------------------------+
+|                    💻 Virtual Machines (VMs)               |
+|                                                            |
+|   +----------------------+   +----------------------+      |
+|   |      VM #1           |   |      VM #2           |      |
+|   |  +----------------+  |   |  +----------------+  |      |
+|   |  | Guest OS       |  |   |  | Guest OS       |  |      |
+|   |  +----------------+  |   |  +----------------+  |      |
+|   |  | Libraries/Deps |  |   |  | Libraries/Deps |  |      |
+|   |  +----------------+  |   |  +----------------+  |      |
+|   |  | Application    |  |   |  | Application    |  |      |
+|   +----------------------+   +----------------------+      |
+|                                                            |
++------------------------------------------------------------+

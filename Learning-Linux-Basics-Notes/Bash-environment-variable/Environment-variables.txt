@@ -1,0 +1,43 @@
+	environment variables:
+
+echo $SHELL
+
+What is $SHELL
+Answer:
+
+Variable in any programming language is used to store value.
+WORD SHELL in upper case is environment variable. it stores the value of the type of SHELL used by the user.
+To print the variable value, we use $ symbol. 
+
+Environment variable in specific, store information about user's login session and env variable is available in complete env means in complete OS.
+Environent variable is used by shell when executing commands.
+
+------------------------------------------------------------------------
+
+To see a list of all environment variables use env command.
+
+env
+
+environment variables:
+
+echo $PATH 
+echo $LANG
+echo $HOME
+echo $LOGNAME
+
+To set an environment variable use export command with argument. OFFICE=calestine argument to the export command.
+
+export OFFICE=calestine
+
+
+this command create a new environment variable OFFICE and set value calestine.
+
+You can also assign variable without the export the command.
+like
+$OFFICE=caleston
+
+this variable will be available within the shell. 
+value is not carry forward to any other process.
+
+To make this variable persistent over subsequent login or reboots, add them to the .profile or .pem_environment file the user home directory.
+

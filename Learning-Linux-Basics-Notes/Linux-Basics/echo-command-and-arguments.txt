@@ -1,0 +1,35 @@
+echo Hit-Enter 
+it will not print any message.
+
+Arguments: 
+An argument is an input to the commands.
+
+Now pass argument "Hello" to the echo command.
+echo "Hello" try / echo hello
+
+echo command need input arguments..
+
+uptime:
+This is used to print information about how long the system has been running for since the last reboot along with other information.
+
+uptime command does need an argument.
+
+Command syntax:
+
+Print Hello without new line.
+
+echo -n Hello
+
+command syntax:
+
+Command  <options>  <arguments>
+
+Options/switch refered as single letter preceded by a single hyphen. like -h -n
+
+echo $HOME  
+echo $PATH
+
+
+
+
+

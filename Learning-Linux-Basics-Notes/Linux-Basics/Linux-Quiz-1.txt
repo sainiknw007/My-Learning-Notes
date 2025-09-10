@@ -1,0 +1,10 @@
+Which directory contains the user home directories by default?
+/home
+
+Which command would you use to find out the type of a command?
+type echo
+
+In the command “echo -n hello”, what is “-n”
+-n is options/switch
+
+hello is argument.

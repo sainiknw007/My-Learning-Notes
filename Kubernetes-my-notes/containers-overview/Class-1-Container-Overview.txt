@@ -1,0 +1,41 @@
+				Kubernetes or K8s
+
+Kubernetes also known as K8s was built by Google based on their experience running containers in productions.
+It is now an open source project and is one of the best and most popular container orchestration technologies.
+
+			To understand Kubernetes first, you should understand.
+
+			Container and Orchestration
+
+Most popular container technology is Docker.
+
+Why you need docker and what it can do for you ?
+Ans: One of the issue with VMWare virtualization is :
+
+In of the project we have set up: Virtualization 
+
+Setup a Web Server      ------------> using node js
+Setup a Database Server ------------> mongo db
+Configure Messaging System like  ------------> Redis
+Orchestration Tool------------>like Ansible
+
+We need to make sure, all the services are compatible with OS version that we are planning to use.
+certain services are not compatible not version of OS.
+
+Lots of issues faces/disadvantages for virtualization and application deployment:
+
+1. Virtual Machine (VMs) run full guest operating system.
+2.they consume more CPU, memory and storage.
+3. Slower startup and shutdown times compared to containers.
+
+There are common deployment issues:
+
+1. Operating system compatibility issue, app may run on specific OS versions.
+2. if you deploy the application on a different OS (ubuntu, centos) bugs or crashes.
+3. especially problems when
+deploying from developer's laptop to staging 
+deploying from staging env to production env.
+
+Long setup time and 
+compatibility/dependencies issue
+

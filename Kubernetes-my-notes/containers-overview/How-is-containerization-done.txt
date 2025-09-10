@@ -1,0 +1,31 @@
+How is Containerization done ?
+
+There are lots of containerisation version of applications readily available.
+Most organization have their products containerized and available in a public docker registry called Docker hub already.
+
+For example:
+
+You can find images of most common operating system,
+databases,
+and other services and tools.
+
+You install Docker on your host and hosting/creating an application easy with docker image.
+You can pull images from docker container using docker pull command.
+you can create container using docker run command.
+
+docker run ansible --> command will run an instance of ansible on your docker host.
+similarly run an instance of mongodb,
+run an instance of nodejs
+
+docker run ansible
+
+docker run nodejs
+
+docker run redis
+
+run an instance of Redis messaging tool.
+
+Can create multiple instance of webservice, we can create multiple instance.. and configure load balancer.
+
+Docker image is a template or set of instructions to create docker container.
+

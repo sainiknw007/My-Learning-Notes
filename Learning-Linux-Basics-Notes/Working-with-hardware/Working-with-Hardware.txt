@@ -1,0 +1,13 @@
+How Linux identify and mange hardware devices:
+
+Example: 
+
+Step:1). When an USB Sisk is attached to the system.
+pendrive/mouse/usb keyboard/ headphones
+
+Step:2). Corresponding device driver (which is part for kernel space) detects the state change, and generates an event.
+
+Step:3). This Event called uevent is sent to the user space device manager daemon called udev.
+udev is responsible for dynamically creating a device node associated with the newly attached drive in the /dev file system. 
+
+Step:4). once this process is complete newly attached disk will be visible under /dev file system.

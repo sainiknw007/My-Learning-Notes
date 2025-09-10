@@ -1,0 +1,59 @@
+					Docker vs Containerd
+	
+CLI tools are:
+
+ctr    pronounce as work CTR or control.
+crictl  
+nerdctl 
+
+Other containers runtime are
+
+Rocker continer : rkt
+containerd
+docker
+
+docker is most famous, docker user experience made working with container super simple.
+docker has become most dominant and famous tool.
+
+Kubernetes was built to orchestrate specifically Docker in the beginning.
+Docker and Kubernetes were tightly coupled, Kubernetes only worked with Docker and did not support any other container solutions.
+
+	
+Kubernetes user needed to work with other container runtime, other than Docker.
+Hence, Kubernetes introduced an interface called CRI Container Runtime Interface.
+
+CRI allow any vendor to work as a container runtime for Kubernetes as long as they adhere to OCI Standards.
+
+OCI: Open Container Initiative 
+OCI consist of an image spec and a runtime spec.
+
+Image specification defined the specification on how an image should be built, and
+the runtime specification defined the standards how an container runtime should be developed.
+
+Kubernetes (kubelet)
+         │
+         ▼
+CRI (ImageService + RuntimeService API)
+         │
+         ▼
+CRI-Compliant Runtime (containerd, CRI-O, Mirantis)
+         │
+   ┌──────────────┐
+   │ Uses OCI Specs│
+   │  - Image Spec │ (pull/build/distribute images)
+   │  - Runtime Spec │ (run containers via runc)
+   └──────────────┘
+
+Keeping these standards in mind, Anyone can build a container runtime that can work with Kubernetes.
+
+Rocket container adhere to the OCI standards hence, rocket container can work with Kubernetes.
+Docker was not built to support the CRI standard, because Docker was introduced before CRI introduced.
+
+Still Docker was dominant container tool.So, Kubernetes had to support to docker as well.
+Hence, Kubernetes introduced Docker shim, temporary way to continue support Docker outside of CRI.
+Other continer runtime work with 
+
+
+
+
+

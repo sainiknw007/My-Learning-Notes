@@ -1,0 +1,49 @@
+Git:
+-------------------------------------------------------------------------------------------------
+Git is not a terminal or Shell
+
+Git is version control system (VCS) that tracks changes in code/projects.
+You use Git commands (git init, git commit, git push ) inside a shell/terminal.
+
+Git → a program/tool (not a shell/terminal).
+
+Example:
+
+git status
+
+bash/shell executes the git command.
+Git is Tool/Program runs inside a shell. like (Bash, PowerShell, Zsh).
+
+------------------------------------------------------------------------------------------------
+Windows PowerShell:
+
+
+PowerShell is a shell. (like Bash) developed by Microsoft.
+PowerShell → a shell (with scripting + command execution).
+
+Example:
+
+PS C:\Users\Akhilesh> Get-Process
+
+It comes with its own terminal window (Powershell.exe or new windows terminal).
+
+Terminal vs Shell
+
+Terminal = Window/program where you type (e.g., GNOME Terminal, Windows Terminal, PuTTY).
+
+Shell = Interpreter that runs inside the terminal (e.g., Bash, Zsh, PowerShell).
+
+
+PowerShell → a shell (with scripting + command execution).
+
+------------------------------------------------------------------------------------------------
+
+Git Bash:
+
+Git Bash is a application/package for windows that provide:
+Bash shell..
+Terminal emulator to run that shell.
+Unix-like tools (ssh, scp, ls, cat, etc.)
+
+
+Terminal + Bash Shell + Git commands

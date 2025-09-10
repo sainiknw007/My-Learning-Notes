@@ -1,0 +1,33 @@
+Now we have our application packaged into a Docker Container.
+
+how do you run container in production?
+What if container rely on other container like database service and other services.
+What if the number of users increase and you need to scale the application.
+how do you scale down when the load decreases.
+
+Container Orchestration Tool:
+The whole process of automatically deploying and managing containers is known as Container Orchestration.
+
+Kubernetes is container orchestration Tool.
+
+There are multiple technologies that provide container orchestration:
+
+Docker has its own orchestration tool called Docker Swarm.
+Kubernetes from Google.
+MESOS from apache.
+
+Docker swarm is easy to setup and get started with container orchestration.
+Docker swarm lacks in advance features required for complex application.
+
+MESOS is quite difficult to setup and get started. Apache MESOS support many advanced features.
+
+Kubernetes is most popular and bit difficult to setup and get started with Kubernetes.
+Kubernetes provide lots of options to customize depoloyments.
+support deployment of complex architecture.
+
+Kubernetes is supported on all Public Cloud now,
+Azure AKS
+AWS EKS
+GCP GKS
+
+Kubernetes project is one of top ranked project in GitHub.

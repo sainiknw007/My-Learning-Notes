@@ -1,0 +1,21 @@
+Absolute and Relative Path:
+
+Absolute path:
+Absolute path is the location of a file or directory starting from the root directory.
+
+example: 
+Absolute path of Asia directory is /home/Michael/Asia
+
+The relative path is the path in relation to the present working directory.
+
+Example:
+
+~$: pwd
+/home/Michael
+
+Relative Path
+
+now go to Asia
+~$:cd Asia
+
+

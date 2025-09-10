@@ -1,0 +1,22 @@
+apiVesion: app/v1
+kind: ReplicaSet
+metadata:
+   name: ReplicaSet
+    labels:
+      app: myapp
+spec: 
+  selector:
+     matchlabels: 
+       tier: frontend
+  replicas: 3
+  template:
+      metadata:
+        name: nginx
+        labels: 
+          name: nginx-pod
+          tier: frontend
+          env: production
+      spec:
+        Containers:
+        - name: nginx
+          imgae: nginx

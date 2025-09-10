@@ -1,0 +1,31 @@
+Shell Types:
+
+Most Popular Shell types are :
+
+1). Bourne Shell (sh) : Developed in 1970 and for Unix and still in use today.
+2). C Shell (csh or tcsh)
+3). Korn Shell (ksh)
+4). Z Shell (zsh)
+5). Bourne again Shell (bash): Which is often called as Bash.
+
+These shells may differ in different ways in their core capabilities, but all of them have one common purpose.
+To facilitate communication between the user and the operating system.
+
+To check the Shell being used, use the command echo $SHELL
+and SHELL is upper case. SHELL Is env variable.
+
+echo $SHELL
+/bin/bash
+
+default shell is bash shell.
+
+Bash is most popular shell, because of its features like such as bash completion or brace expansion. whic is not available in shells such as borne shell.
+
+To change the default shell, use the command chsh Change shell.
+
+chsh
+
+You will be prompted for password and Enter the new Valuse or ENTER for default 
+
+Password:******* Hit Enter
+Login Shell [/bin/bash]: /bin/sh

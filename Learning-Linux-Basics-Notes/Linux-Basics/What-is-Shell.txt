@@ -1,0 +1,77 @@
+What is Shell ? What , how and why ?
+
+What is Shell ? (Command line interpreter)
+A Linux shell is a program that provides an interface between the user and the Linux operating system (kernel).
+It lets you type commands, which the shell interprets and passes to the OS for execution.
+
+Linux shell is a program, Think of it as the command-line interpreter for Linux.
+
+Why do we need a Shell?
+
+The kernel (core of Linux/Unix) only understands very low-level instructions (system calls).
+
+Writing system calls directly is complex.
+
+Shell gives us a human-friendly interface (text based interface)to interact with the OS.
+
+How does a Shell work?
+
+Example: When you type ls -l
+
+How Shell works :Real time example:
+
+If you open a terminal in Linux and type:
+
+ls -l 
+
+The shell interprets it, asks the kernel to execute it, and shows the result.
+
+Linux Architecture (User → Shell → Kernel → Hardware)
+
+
++-----------------+
+|     User        |   👩‍💻  (You typing commands like ls, mkdir, cat)
++-----------------+
+          |
+          v
++-----------------+
+|    Terminal     |   💻 (Where you type commands putty, GNOME terminal, or an ssh sesssion)
++-----------------+
+          |
+          v
++-----------------+
+|     Shell       |   🐚 (Bash/Zsh – command interpreter: a program that interpret your command and pass to the kernel)
++-----------------+
+          |
+          v
++-----------------+
+|     Kernel   
+Heart of Linux    |	   🖥️ (Manages system resources: CPU, Memory, Disk, Network , Processes	) Shell ask kernel to do the task.
++-----------------+
+          |
+          v
++------------------------+
+|    Hardware   	 |
+Your Physical resources  |   ⚙️ (CPU, RAM, Disk, Network)
++------------------------+
+
+------------------------------------------------------------------
+What is shell scripting ?
+
+What , how and why ?
+
+Scripting – Shells support scripting (writing .sh files) to automate repetitive tasks.
+
+Types of Shells –
+
+Bash (Bourne Again Shell) → Most common default shell.
+
+sh (Bourne Shell) → Original Unix shell.
+
+zsh → Extended shell with extra features.
+
+csh/tcsh → C-like syntax shell.
+
+fish → User-friendly interactive shell.
+
+Korn shell

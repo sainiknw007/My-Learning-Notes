@@ -1,0 +1,14 @@
+A node is machine, physical or virtual on which Kubernetes is installed.
+A node is a worker machine and that is where containers will be launched by Kubernetes.
+
+Node was known as minions in the past.
+
+What if your nodes on which application is running goes down, application will also go down.
+that's why you need to have more than one node.
+
+Cluster is a group of nodes grouped together. This way even if one node falls you have your application still accessible 
+from the other nodes.
+Multiple nodes share load as well.
+
+Now we have a Cluster now.
+

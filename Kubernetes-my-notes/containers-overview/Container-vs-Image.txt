@@ -1,0 +1,12 @@
+Container vs Image:
+
+What is an Docker Image ?
+Docker Image is a package or a template, just like a VM template.
+Image is used to create one or more containers.
+
+
+Containers are running instances of images that are isolated and have their own environments and set of processes.
+
+Docker images are available on docker hub, if you do not find any image that you want.
+You can create your own customer image.
+

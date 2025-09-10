@@ -1,0 +1,34 @@
+
+Bash Shell Features: Borne again Shell commonly referred as bash.
+
+1).Support command auto-completion: means
+Bash will attempt to auto-complete the commands for you if you type a part of it and press the tab key.
+
+cd /var/lo  --------> Press tab key
+
+This feature can extend to completing 
+>a file or a directory name.
+>commands
+>its arguments and options.
+
+this is very handy.
+
+You can type first few characters for the file or directory or path and use tab space key to take advantage of auto complete features.
+Just type in the first few characters of a file or directory and use tab space to take advantage of the auto-complete features.
+
+2). Alias: In Bash shell we can set custom aliases for the actual commands.
+
+set dt alias to command date.
+
+date  command display current date and time in UTC format, IST is +5:30 UTC
+$alias dt=date               
+
+once the alias is set, you can type dt command every time to print the date.
+
+3).history:
+
+you can use the history command to get the list of commands previously run.
+
+
+
+

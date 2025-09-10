@@ -1,0 +1,10 @@
+Kubernetes is an container orchestration technology, used to orchestrate the deployment and management of hundreds and thousands of 
+containers in a cluster environment.
+
+1). Your application is highly available.
+2). Hardware failure will not down application, as multiple instances of application are running on different node.
+3). User traffic is load balanced across various containers.
+4). When demand increases deploy more instances of the application seamlessly and within a matter of seconds.
+5). Scale the number of nodes up or down.
+
+Can do these with set of declarative object configuration files and we can do this with Kubernetes.

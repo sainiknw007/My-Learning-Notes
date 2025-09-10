@@ -1,0 +1,33 @@
+In Docker we have underlying 
+Hardware infrastructure
+ OS installed on hardware...
+and then Docker installed on the OS.
+
+then docker can manage the containers , container containerize application , each container run with their own libraries, dependencies.
+
++------------------------------------------------------------+
+|                  🖥️  Hardware Infrastructure               |
+|        (CPU, RAM, Disk, Network - Physical or Virtual)     |
++------------------------------------------------------------+
+|                      🧰 Host Operating System               |
+|                    (Linux, Windows, etc.)                  |
++------------------------------------------------------------+
+|                    🐳 Docker Engine Installed              |
+|       (Docker Daemon + CLI manages container lifecycle)    |
++------------------------------------------------------------+
+|                 🔹 Containerized Applications              |
+|                                                            |
+|   +--------------------+     +-------------------------+   |
+|   |   Container 1       |     |     Container 2         |   |
+|   |  - App (e.g., Nginx)|     |  - App (e.g., Redis)     |   |
+|   |  - Libs & Deps      |     |  - Libs & Deps           |   |
+|   |  - Runtime Env      |     |  - Runtime Env           |   |
+|   +--------------------+     +-------------------------+   |
+|                                                            |
+|   +-----------------------------+                          |
+|   |      Container 3            |                          |
+|   |   - App (e.g., Node.js API) |                          |
+|   |   - Libs & Deps             |                          |
+|   +-----------------------------+                          |
+|                                                            |
++------------------------------------------------------------+

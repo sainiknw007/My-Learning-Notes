@@ -1,0 +1,21 @@
+Container Advantages:
+
+Traditionally Developer develop application and hand over to Operating team to deploy it in dev/uat and production environment.
+They provide a set of instructions 
+
+1).such as information about how to setup hosts
+2). what prerequisite to be installed on the host.
+3). how to configure dependencies
+
+Ops team uses this guide to setup the application.
+Since the Ops team did not develop the application, they struggle setting up application environment and 
+and they git with number of issues. 
+They work with developer team to resolve it.
+
+With Docker developer and operation teams work hand in hand to transform the application setup guide in Dockerfile with their requirements.
+
+This Dockerfile is used to create Docker image.
+
+This image can run on anyhost with Docker installed on it, and it is gurantee to work in same way.
+So now the Operations team can now use the Docker image to deploy the application.
+

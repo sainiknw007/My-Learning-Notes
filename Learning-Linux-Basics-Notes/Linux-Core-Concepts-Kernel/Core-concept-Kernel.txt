@@ -1,0 +1,58 @@
+Linux Core Concepts:
+
+1).Introduction to Linux Kernel
+2).Kernel space and User space
+3).Working with Hardware: How Kernel works with Hardware available to the system
+Labs: Linux Core Concept
+
+1).Linux Boot sequence
+2).SYSTEMD TARGETS (RUNLEVELS)
+3).Linux Filesystems and Hierarchy
+
+What is Kernel ?
+Kernel is heart of Linux/OS. 
+Kernel is the Core interface between  a computer's hardware (CPU , Memory and ) and its process/applications.
+
+Linux Kernel Architecture
+
++--------------------------------------------------------------------------------------+
+|         Applications/Process 							       |
+|  These are programs you run (e.g., browser, editor, server, nginx, apache).
+|   They do not directly communicate to the hardware.
+|   Instead, they send requests (system calls) to the Linux Kernel.			|   <- User Space
++--------------------------------------------------------------------------------------+
+            |
+            v
++-----------------------+
+|      Linux Kernel     |                                      <- Kernel Space
++-----------------------+
+   |        |        |
+   v        v        v
+Memory     CPU    Devices    					  <- Hardware
+
+
+
+Kernel is responsible of 4 Major Tasks:
+
+Memory management: 
+Track memory usage and allocation.
+Keep track of how much memory is used to store and what is stored in the memory.
+
+Process management: 
+Determine which process can use the CPU , when and for how long.
+Schedules processes on the CPU and determines their execution order.
+
+Device Driver: 
+Act as a mediator or an interpreter  between the hardware devices and software processes.
+
+System call and Service: 
+receive requests for service from the processes.
+
+Linux Kernel is monolithic which means Kernel perform 
+CPU Scheduling, 
+memory management,
+and several other operations by itself.
+
+The Kernel is also modular, which means it can extend its capabilities through the use of dynamically loaded kernel modules.
+
+

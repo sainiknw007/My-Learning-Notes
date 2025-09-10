@@ -1,0 +1,108 @@
+One of the significant function of Linux Kernel is Memory management.
+
+how memory is separated within the Linux Kernel.
+
+Memory is divided into two areas known as
+1).Kernel Space / kernel mode
+2).User space  / user mode
+
+
+────────────────────────────────────────────
+                 User Space
+────────────────────────────────────────────
+   • Applications / Programs
+────────────────────────────────────────────
+
+
+────────────────────────────────────────────
+                 Kernel Space
+────────────────────────────────────────────
+   • Kernel
+   • Device Drivers
+────────────────────────────────────────────
+
+👉 Kernel Space is reserved for running
+   - Kernel Code
+   - Kernel Extensions
+   - Device Drivers
+
+👉 User Space contains:
+   - Applications / Programs
+
+
+1). Kernel Space: 
+
+Kernel space is the portion of the memory in which the kernel executes (kernel runs) and provides its services.
+A process running the kernel space has unrestricted access to the hardware.
+
+Kernel space is reserved for running 
+kernel code,
+Kernel extensions and 
+most device drivers.
+
+2). User Space:
+
+All processes running outside the Kernel reside in the User Space, which has restricted access to CPU and Memory.
+
+User Space applications are programs that are written in 
+C
+Java
+python
+Ruby
+or any other programming language.
+
+Unix/Linux system occurs with prepackage application,
+
+How programs run in the User Space:	
+
+All Users Programs function by manipulating data, but where does this data live ?
+
+User programs data live in memory and on disk.
+
+What is System call ?
+Ans: User Programs get access to data by making specials requests to the Kernel called system calls.
+
+For example: Opening a file such as the /etc/os-release file to see the version of the Operating System -----> results/make in a system call to kernel
+
+here open the file specified by pathname.
+
+the file is located in the /etc directory which is mounted on filesystem created on a block device.
+
+Open a file
+write a file
+List Processes
+Defining a variable.
+
+Example of System calls are:
+
+open()
+close()
+reddir()   --> red directory.
+strlen()   --> String length.
+closedir() --> Close directory.
+
+------------------------------------------------------------------------------------------------------------------
+
+                ┌─────────────────────┐
+                │     User Space      │
+                │ ─────────────────── │
+                │ Applications/       │
+                │ Programs            │
+                └─────────┬───────────┘
+                          │
+                          │  System Calls
+                          ▼
+                ┌─────────────────────┐
+                │     Kernel Space    │
+                │ ─────────────────── │
+                │  • Kernel           │
+                │  • Device Drivers   │
+                └─────────┬───────────┘
+                          │
+                          │  Hardware Access
+                          ▼
+                ┌─────────────────────┐
+                │      Hardware       │
+                └─────────────────────┘
+
+

@@ -1,0 +1,42 @@
+Q1.how to change current bash shell to borne shell.
+Q2. What is the value of the environment variable TERM?
+Q3. What is the value of env varilable TERM?
+
+
+Q1.how to change current bash shell to borne shell.
+Ans:
+
+sudo chsh -s /bin/sh
+
+provide password
+
+chsh -s /bin/sh bob
+🔹 What it does:
+chsh = change shell command in Linux.
+
+-s = option to specify the login shell.
+
+/bin/sh = the new shell you want to assign.
+
+bob = the username (whose shell is being changed).
+
+The shell change only takes effect for new login sessions.
+----------------------------------------------------------------------------------
+
+grep "^bob:" /etc/passwd
+🔹 What happens here?
+grep → search for matching text in a file.
+
+^ → regex anchor meaning “start of the line”.
+
+bob: → literal string bob:.
+
+/etc/passwd → file that stores user account information.
+-------------------------------------------------------------------------------------
+
+Q2. What is the value of the environment variable TERM?
+Ans: 
+echo $TERM
+
+or check env command
+

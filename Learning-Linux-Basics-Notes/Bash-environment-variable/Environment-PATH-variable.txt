@@ -1,0 +1,19 @@
+When a user type an external command, the shell uses PATH variable to search for external command.
+
+echo $PATH
+
+To see the directories defined in the path variable, use the command echo $PATH.
+ 
+which obs-studio
+
+To check location of a command use which command, which obs-studio.
+
+obs-studio
+command not found
+
+we can add path using
+
+export PATH=$PATH:/opt/obs/bin
+
+then check command path using which command
+which obs-studio

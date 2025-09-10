@@ -1,0 +1,51 @@
+Bash prompt:
+
+after login you see a line
+[ubuntu@ip.172.52.23.56:~]$  -------> this is known as bash prompt.
+
+~ normal user home directory
+$ normal user.'
+
+[michael@prod-server]
+
+When you are working on multiple servers terminals,
+it lets you know which host you are on.
+
+bash prompt can be customize to show username and hostname.
+
+bash prompt is set and controlled by a set of special shell environment variables.
+
+command varilable is PS1 variable
+
+To see value assign to PS1 variable.
+
+echo $PS1
+[\W]$
+
+\w --> represent working directory
+$   --> symbol for user prompt, normal user
+
+Change bash prompt value to ubuntu-server: followed by : colon.
+
+$ PS1="ubuntu-server:"
+
+after running this command, the bash prompt will immediately change to
+
+ubuntu-server:
+
+You can customize bash prompt by inserting a number of backslash special characters.
+
+PS1="[\d \t \u@\h:\w]$"
+
+\d --> date in weekday month and weekday format like
+Tue May 26
+
+\t the current time in the 24 hours HH:MM:SS format
+
+\u --> the username of the current user
+
+\h --> the hostname FQDN
+
+\w --> the current working directory.
+
+$ : if the effecetive is 0, a # otherwise a$

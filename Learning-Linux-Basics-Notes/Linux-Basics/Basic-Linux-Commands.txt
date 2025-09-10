@@ -1,0 +1,63 @@
+Task 1:
+
+1). Create  a directory structure under /home/Michael
+
+Create four directory Asia, Europe , Africa and America under Michael home directory.
+under each directory there are country directory.
+
+/home/michael
+├── Asia
+│   ├── China
+│   └── India
+├── Europe
+│   └── UK
+├── Africa
+│   └── Egypt
+└── America
+
+Ans: 
+pwd
+/home/Michael
+
+mkdir Aisa    --> Create single directory
+Asia directory created.
+
+mkdir Europe Africa America            --> to create multiple directories
+Created directory
+
+mkdir /Asia  India China
+OR
+cd Asia
+Aisa~$ mkdir India/Mumbai ---> Creates a New directory Mumbai under India.
+
+mkdir -p India/Mumbai   --> This commands create a parent directory India and then create Mumbai under India.
+mkdir -p /home/bob/test/test1/test2 ----> create parent directory as well.
+
+delete the directory called reptile along with its contents.
+
+rm -r /home/bob/reptile
+
+remove reptile with its content.
+
+ls command: list contents.
+if there is not output of ls command, it means the directory is empty.
+
+
+cd ..      ---------> cd command followed by two dots takes to 1 directory back.
+
+OR
+
+cd --> cd  command without arguments command takes to user home directory from any where in the system.
+
+OR 
+
+cd /home/Michael   --> you can use cd followed by complete path to move to directory location.
+
+whatis date --> Display what a command does in oneline
+
+man date     -------> It displays manual of a command.
+date --help    --> Using command line to get help.
+apropos modr   --> 
+
+
+history --> use the history command to get a list of previously run commands.

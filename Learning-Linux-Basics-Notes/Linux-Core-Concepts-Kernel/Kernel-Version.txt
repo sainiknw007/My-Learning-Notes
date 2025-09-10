@@ -1,0 +1,37 @@
+How to identity Linux Kernel Version:
+
+The Kernel is the integral part of the Operating System.
+Means--> The kernel is the core (heart/brain) of an operating system.
+
+uname --> You can use uname command to display information about Kernel.
+And by default it does not provide much information.
+
+Use
+uname -r or uname -a  > use this command to display kernel version.
+4.15.0-72-generic
+
+What is -r and what is -a
+
+4  = is Linux Kernel Version
+15 = Major version
+0  = Minor Version
+72 = Patch Version
+Generic = Distro Specific addition information.
+
+The First Linux kernel was developed by Linux Torvalds in 1991.	
+Latest Kernel version is 6.16.4 
+6= is kernel version
+16 = major version
+4 minor version
+
+The stable version is Linux 6.16.4, released on August 28, 2025
+
+All Linux Distributions make use of any one of these versions of Kernel. 
+For example:
+ubuntu 20.04 which was released in April 2020 uses the Linux Kernel Version 5 out of the box.
+
+
+
+https://kernel.org/ 
+This is an open-source project that hosts the repositories that make all version of the Kernel source code available to all users.
+all version of kernel source code available for all users.
