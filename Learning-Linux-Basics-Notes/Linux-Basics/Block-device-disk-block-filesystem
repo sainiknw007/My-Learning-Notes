@@ -1,0 +1,13 @@
+Disk Block: 
+The smallest unit of data storage on a physical disk (usually 4KB). 
+Think of it as a single "tile" in a giant mosaic.
+
+Block Device: (hardware device that stores data in fixed-size blocks,)
+A block device in Linux is a type of hardware device that stores data in fixed-size blocks, 
+like hard drives, SSDs, or USB drives. 
+The hardware (like a hard drive or SSD) that stores data in these blocks. 
+It presents itself to the OS as a device that handles blocks.
+
+Filesystem: 
+The organizational structure that manages how data is stored and retrieved on the block device. 
+It uses disk blocks to store files, directories, and metadata, acting like a "map" for the data.
