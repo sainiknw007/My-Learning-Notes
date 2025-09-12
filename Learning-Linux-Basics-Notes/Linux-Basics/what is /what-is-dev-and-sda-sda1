@@ -1,0 +1,70 @@
+What is /dev ? What is mount ? mount creates partition in harddrive.
+
+/dev – Device Director
+In Linux, everything is treated as a file – even your keyboard, mouse, hard disk, and USB drives.
+/dev is a special folder that contains device files – these are not normal text files, but interfaces to your hardware.
+
+Think of /dev as the control room where Linux keeps shortcuts to all connected devices.
+
+/dev/sda1 is your first disk’s first partition (most likely where your OS is installed).
+
+Examples of /dev Contents:
+| File in `/dev` | What It Represents                      | Example Use                   |
+| -------------- | --------------------------------------- | ----------------------------- |
+| `/dev/sda`     | First hard disk                         | Used to access the whole disk |
+| `/dev/sda1`    | First partition on first hard disk      | Mounted as `/` or `/home`     |
+| `/dev/sdb1`    | First partition on second disk (or USB) | Mounted at `/mnt/usb`         |
+| `/dev/null`    | "Black hole" device (discards data)     | `echo "test" > /dev/null`     |
+| `/dev/random`  | Random number generator                 | Used in cryptography          |
+| `/dev/tty`     | Terminal device                         | Used for console input/output |
+
+/dev/sda1 – Your Disk Partition
+
+Let’s break the name down:
+sd → Stands for SCSI Disk (applies to SATA, NVMe too nowadays).
+a → First disk (if you had multiple disks, they’d be sdb, sdc, etc.).
+1 → First partition on that disk.
+
+So:
+/dev/sda → The entire first disk.
+/dev/sda1 → The first slice (partition) of that disk.
+
+Real-Life Example:
+
+Imagine your hard disk as a book:
+
+/dev/sda = the whole book.
+
+/dev/sda1, /dev/sda2 = chapters (partitions) in the book.
+
+Linux mounts these partitions to directories so you can use them.
+
+Example:
+mount /dev/sda1 /
+Means: attach partition sda1 to root directory /.
+
+How to See This on Your System
+Run:
+lsblk
+Example output:
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   50G  0 disk 
+├─sda1   8:1    0   48G  0 part /
+└─sda2   8:2    0    2G  0 part [SWAP]
+
+Here:
+sda = 50GB disk
+sda1 = 48GB partition (mounted at /)
+sda2 = 2GB partition (used for swap memory)
+
+Real-Time Example
+
+Imagine you have:
+One main SSD → /dev/sda
+One USB drive → /dev/sdb1
+One external HDD → /dev/sdc1
+When you plug in the USB, Linux creates a new device file under /dev/ (like /dev/sdb1), so you can mount and use it.
+
+In short:
+/dev is where Linux keeps "shortcuts" to hardware.
+/dev/sda1 is your first disk’s first partition (most likely where your OS is installed).
