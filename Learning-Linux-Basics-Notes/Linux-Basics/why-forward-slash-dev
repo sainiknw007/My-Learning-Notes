@@ -1,0 +1,75 @@
+🐧 Why is “Everything under /dev”?
+
+Actually, not everything is under /dev — only devices are.
+But Linux treats everything as a file, including devices.
+
+Here’s why /dev exists and why Linux uses it:
+
+1️⃣ Linux Philosophy: Everything is a File
+
+Files, directories, sockets, pipes, disks, printers — all are represented as files.
+
+This makes it easy for programs to read/write to devices using the same system calls (open, read, write).
+
+Example:
+
+echo "hello" > /dev/tty
+
+
+This prints “hello” to your terminal screen — because /dev/tty is the file representing your terminal.
+
+2️⃣ /dev is Special: Device Files Only
+
+/dev is not for normal files — it’s for device files (also called special files).
+
+Each entry in /dev is a shortcut or interface to real hardware.
+
+Example:
+
+/dev/sda1 → Interface to your disk partition
+
+/dev/null → "black hole" device (discards data)
+
+/dev/random → Random number generator
+
+3️⃣ Kernel + /dev Work Together
+
+The kernel manages hardware.
+
+It creates device files in /dev (either statically or dynamically with udev).
+
+When you access /dev/sda1, the kernel knows you are talking to the disk partition.
+
+4️⃣ Why This is Powerful
+
+Because of this design:
+
+You can mount a disk just by using its /dev/ path:
+
+sudo mount /dev/sdb1 /mnt/usb
+
+
+You can redirect output to special devices easily:
+
+echo "ignore this" > /dev/null
+
+
+Programs don’t need special APIs for every device — they just read/write to a file.
+
+🖼 Simple Mental Model
+
+Think of /dev like a control panel in a building:
+
+Each switch/button in the panel represents one device.
+
+Pressing a button (read/write) sends a signal to the actual machine.
+
+So /dev/sda1 is not the data itself — it’s the doorway to access that data.
+
+✅ In Short:
+
+Not everything is under /dev, but all devices are.
+
+/dev exists to give userspace programs a file-like handle to talk to hardware.
+
+This makes Linux very flexible and simple — you treat devices just like files.
