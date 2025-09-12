@@ -1,0 +1,46 @@
+Linux filesystem ?
+The Linux filesystem is the way Linux organizes and manages data save n retrive (files, directories) on your computer.
+Unlike Windows (which uses C:\, D:\ drives), 
+Linux uses a single root directory / — everything starts from there.
+
+The Linux filesystem is a hierarchical tree starting from /, following a standard structure, and can use multiple filesystem types 
+like ext4, xfs, btrfs depending on needs.
+
+| Filesystem Type        | Where You See It        | Example Use                                       |
+| ---------------------- | ----------------------- | ------------------------------------------------- |
+| **ext4** (most common) | Ubuntu, Debian, CentOS  | Default for root (`/`) partition                  |
+| **xfs**                | RHEL, Fedora            | Often used for servers (large files, scalability) |
+| **btrfs**              | SUSE, Fedora (optional) | Snapshots, rollback features                      |
+| **vfat / exFAT**       | USB drives              | Cross-platform with Windows                       |
+| **tmpfs**              | `/tmp`, `/run`          | Stores data in RAM for faster access              |
+| **nfs**                | Mounted network drives  | Shared storage in enterprise environments         |
+
+Check Filesystem Type
+df -Th
+
+df -Th → Shows mounted filesystems, types, and usage.
+Example Output:
+
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/sda1      ext4   50G   12G   36G  25% /
+tmpfs          tmpfs  2.0G     0  2.0G   0% /dev/shm
+
+Check Filesystem Type
+df -Th
+
+
+df -Th → Shows mounted filesystems, types, and usage.
+Example Output:
+
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/sda1      ext4   50G   12G   36G  25% /
+tmpfs          tmpfs  2.0G     0  2.0G   0% /dev/shm
+
+See Mount Points
+mount | grep "^/"
+
+Shows which device is mounted where.
+Example:
+
+/dev/sda1 on / type ext4 (rw,relatime)
+/dev/sdb1 on /mnt/data type xfs (rw,relatime)
