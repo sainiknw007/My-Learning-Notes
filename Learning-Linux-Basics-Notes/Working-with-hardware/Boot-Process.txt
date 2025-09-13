@@ -1,0 +1,5 @@
+ls -l /sbin/init  this tool is used to check init system used.....
+
+ls -l /sbin/init
+
+if it is a systemd managed system, you will see a pointer to the /lib/systemd/systemd

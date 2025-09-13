@@ -1,0 +1,94 @@
+1). dmesg:
+ 	  is a tool(command) used to display messages from ring buffer (an area of kernel).
+dmesg | grep -i usb
+use this tool/command to filter for specific device like need usb related msg/logs.
+
+2). udevadm utility is a management tool for udev.
+udevadm info --> udev info command query udev database for device information.
+
+udevadm info --query=path --name=/dev/sda5 
+in this command we are querying the hard disk attached to the system.
+
+3). udevadm monitor command listens to kernel uevents.
+upon detecting an event, it prints the details, such as the device path and device name on the screen.
+
+in the example: run udevadm monitor and check
+remove usb mouse from the system.
+
+4).  lspci - command display information about PCI devices that are configured in the system.
+PCI peripheral component interconnect, example of PCI devices are ethernet cards, raid,
+controllers,video cards and wireless adapters that directly attached to the PCI slots in the motherboard.
+
+5). lsblk command list information about block devices.
+
+$ lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0  100G  0 disk 
+├─sda1   8:1    0   96G  0 part /
+└─sda2   8:2    0    4G  0 part [SWAP]
+sr0     11:0    1 1024M  0 rom  
+
+6). lscpu ---> display detailed information about cpu architecture.
+
+Number of cores
+threads
+model etcetra.
+
+$ lscpu
+Architecture:            x86_64
+CPU op-mode(s):          32-bit, 64-bit
+Byte Order:              Little Endian
+CPU(s):                  8
+On-line CPU(s) list:     0-7
+Thread(s) per core:      2
+Core(s) per socket:      4
+Socket(s):               1
+Vendor ID:               GenuineIntel
+Model name:              Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz
+CPU MHz:                 2100.000
+CPU max MHz:             3000.0000
+CPU min MHz:             1200.0000
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                256K
+L3 cache:                10M
+NUMA node(s):            1
+NUMA node0 CPU(s):       0-7
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr 
+
+7).lsmem --summary 
+
+this command is used to list the available memory in the system.
+
+lsmem --summary 
+
+this command is used to list the available memory in the system.
+
+free -m   --> -m shows in MB , -k shows in KB and -g shows i Gigabytes.
+free -k
+free -g
+free -h
+this command is used to get total memory, used memory, free memory in the system.
+
+8).lshw 
+
+is a tool to extract detailed information on the entire hardware configuration of the machine.
+
+it gives
+
+
+Memory configuration,
+firmware version,
+mainboard configuration,
+CPU version and speed,
+cache configuration,
+bus speed.
+
+lshw gives a warning, you should run this program as super user
+sudo lshw
+
+9). ls -l /sbin/init  this tool is used to check init system used.....
+
+ls -l /sbin/init
+
+if it is a systemd managed system, you will see a pointer to the /lib/systemd/systemd

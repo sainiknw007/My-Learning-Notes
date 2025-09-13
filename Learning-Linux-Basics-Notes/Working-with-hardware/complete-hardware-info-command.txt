@@ -1,0 +1,20 @@
+lshw 
+
+is a tool to extract detailed information on the entire hardware configuration of the machine.
+
+it gives
+
+
+Memory configuration,
+firmware version,
+mainboard configuration,
+CPU version and speed,
+cache configuration,
+bus speed.
+
+lshw gives a warning, you should run this program as super user
+try
+sudo lshw
+user asked to enter password.
+
+

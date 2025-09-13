@@ -1,0 +1,10 @@
+lsmem --summary 
+
+this command is used to list the available memory in the system.
+
+free -m   --> -m shows in MB , -k shows in KB and -g shows i Gigabytes.
+free -k
+free -g
+free -h
+this command is used to get total memory, used memory, free memory in the system.
+

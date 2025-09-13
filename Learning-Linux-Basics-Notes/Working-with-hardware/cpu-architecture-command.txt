@@ -1,0 +1,77 @@
+1). lscpu ---> display detailed information about cpu architecture.
+
+Number of cores
+threads
+model etcetra.
+
+CPU architecture popular types:
+
+32-bit processors were used till 1990.
+64-bit processors 
+
+What is 32-bit processors ?
+32-bit processor can address and store 2^32= 4GB gigabytes value in the register.
+
+CPU register --> store temporary data, instructions, and memory addresses for cpu immediate operations.
+A register is very small, high-speed storage location directly inside the Central Processing Unit (CPU).
+
+Example: register is used to carry out data from memory and carry out arithemetic operations.
+
+64-bit process can address and store 2^64 = 18 exaybytes.
+
+On 32-bit CPU/processor you can run only 32-bit OS.
+You cannot install 64-bit OS in a 32-bit CPU/processor architecture.
+it is possible however not recommended.
+
+32-bit CPU machine can only run 32-bit version of software.
+
+a 64-bit CPU can run both 32-bit and 64-bit software. it is recommended to run 64-bit version if possible.
+
+$ lscpu
+Architecture:            x86_64
+CPU op-mode(s):          32-bit, 64-bit
+------------------- check screenshot for further process for comman output.--------------------------------------------
+
+$ lscpu
+Architecture:            x86_64
+CPU op-mode(s):          32-bit, 64-bit
+Byte Order:              Little Endian
+CPU(s):                  8
+On-line CPU(s) list:     0-7
+Thread(s) per core:      2
+Core(s) per socket:      4
+Socket(s):               1
+Vendor ID:               GenuineIntel
+Model name:              Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz
+CPU MHz:                 2100.000
+CPU max MHz:             3000.0000
+CPU min MHz:             1200.0000
+L1d cache:               32K
+L1i cache:               32K
+L2 cache:                256K
+L3 cache:                10M
+NUMA node(s):            1
+NUMA node0 CPU(s):       0-7
+Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr ...
+
+----------------------------------------------------------------------------------------------------
+Sockets are the physical slots where you can insert a physical CPU.
+
+Each phsyical CPU have multiple cores.
+
+in above example number of cores are 4.
+each core can run multiple thread, here 1 core can run 2 thread.
+
+Total no. of CPUs or virtual CPUs = number of sockets x no. of cores x no. of thread
+Total no. of CPUs or virtual CPUs = 1x4x2 = 8 
+it means this system can run 8 parallel thread at a time. and this value 8 is seend under CPUs output.
+
+This lscpu command shows the vendor and model of CPU.
+
+
+
+
+
+
+
+
