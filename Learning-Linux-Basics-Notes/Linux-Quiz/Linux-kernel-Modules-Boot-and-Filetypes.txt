@@ -1,0 +1,43 @@
+Linux kernel Modules Boot and Filetypes:
+
+Quiz:
+
+What is the init process used by this system? 
+use command
+sudo ls -l /sbin/init
+output:
+bob@caleston-lp10:~$ sudo ls -l  /sbin/init
+lrwxrwxrwx 1 root root 20 Feb  6  2020 /sbin/init -> /lib/systemd/systemd
+
+What is the default systemd target set in this system?
+Use command:
+sudo systemctl get-default
+
+output: 
+bob@caleston-lp10:~$ systemctl get-default 
+graphical.target
+
+change the target to multi-user.target
+bob@caleston-lp10:~$ sudo systemctl set-default multi-user.target
+Created symlink /etc/systemd/system/default.target → /lib/systemd/system/multi-user.target.
+
+What type of file is firefox.deb located at /root?
+sudo file /root/firefox.deb
+bob@caleston-lp10:~$ sudo file /root/firefox.deb
+/root/firefox.deb: Debian binary package (format 2.0)
+Ans: Debian binary package 
+
+
+What type of file is sample_script.sh located at /root?
+bob@caleston-lp10:~$ sudo file /root/sample_script.sh
+/root/sample_script.sh: Bourne-Again shell script, ASCII text executable
+Ans: Bourne-Again shell script / BASH shell script.
+
+You are asked to install a new third-party IDE (integrated development environment ) in the system.
+Ans: Third-party software is usually installed under /opt
+
+Which directory contains the files related to the block devices that can be seen when running the lsblk command?
+Block Device or Device Node files are located under /dev directory.
+
+What is the name of the vendor for the Ethernet Controller used in this system?
+Use: sudo lshw and lookup the vendor for Ethernet Controller under the network section.
