@@ -1,0 +1,4 @@
+What is package management ?
+RPM and YUM
+APT and DPKG
+Labs: Package Management
