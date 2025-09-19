@@ -1,1 +1,56 @@
+Linux Boot Process can be broken down into 4 stages:
+
+First Step/Process is BIOS POST
+2nd Boot Loader or GRUB2
+3rd is Kernel initialization
+4th is Service initialization using systemd INIT Process
+
+
+How to initializde Linux boot process:
+
+2 ways
+
+Start a Linux system when it is in halted state or stopped state.
+2nd is reboot or reset a running system.
+
+1st Step: 
+
+BIOS POST:
+POST stands for Poweron self test, BIOS runs a POST test to ensure that the hardware components attached to the devices are functioning correctly.
+
+If POST fails, the computer may not be operable and the system will not proceed to the second stage of the boot process.
+
+2nd Step:
+The next step after BIOS POST is Boot loader, after successfull POST test the BIOS loads and executes the boot code from the boot devices, which is located in the 
+first sector of the hard disk.
+
+In Linux, this is located under /Boot file system.
+the Boot loader provides the user with the boot screen to select OS to boot.
+Like ubunut 18.04 
+
+Once the selection is made, Boot loader loads the kernel into the memory and supply some parameters to kernel.
+And Handover control to kernel.
+
+Popular example of Boot Loader is GRUB2 - GRUB2 stands for Grand unified Bootloader 2
+GRUB2 is primary boot loader for most current linux distributions.
+
+--------------------------------------------------------------------------------------------------------------------------------
+3rd step:
+After the Kernel is loaded into memory.
+it is decompressed, since kernel is in compressed state to converse space.
+then kernel is loaded into memory and starts executing.
+during this space kernel perform some task like hardware initialization, memory managemnt.
+--------------------------------------------------------------------------------------------------------------------------------
+4th step:
+Once it is completed, Kernel looks for INIT process to run.
+INIT process setup the user space and the processes needed for the user environment.
+
+INIT function calls the systemd daemon.
+
+the systemd is responsible for brining the Linux host to a usable state.
+--------------------------------------------------------------------------------------------------------------------------
+Systemd:
+
+Systemd is responsible for bringing the liux host to  a usable state.
+
 
