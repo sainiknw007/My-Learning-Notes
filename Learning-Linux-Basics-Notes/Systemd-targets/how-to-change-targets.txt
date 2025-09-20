@@ -1,1 +1,26 @@
 
+To see default targets run command:
+
+systemctl get-default
+graphical.target
+
+this (systemctl get-default) command  look for file located at
+
+/etc/systemd/system/default.target
+
+check with ls -lrt /etc/systemd/system/default.target
+/etc/systemd/system/default.target  -> /lib/systemd/system/graphical.target
+
+default.target file is softlink/shortcut to graphical.target unit file.
+this file graphical.target is located under /lib/systemd/system/ directory
+
+To change default target we can use 
+
+systemctl set-default command with desired target as command argument..
+
+systemctl set-default multi-user.target --->>>
+
+this command change the default target from graphical to multi-user target.
+
+this is equivalent to switching the runlevel from 5 to 3.
+
