@@ -1,1 +1,14 @@
+Linux can run in multiple mode:
+graphical mode
+command line interface mode
+
+these modes are set by run level.
+
+To see the operation mode set in the system run the command called runlevel and you will get a number.
+
+runlevel
+N  5
+
+runlevel 5 provides graphical interface
+runlevel 3 provides command line interface 
 
