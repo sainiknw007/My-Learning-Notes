@@ -12,3 +12,19 @@ N  5
 runlevel 5 provides graphical interface
 runlevel 3 provides command line interface 
 
+during boot the init process checks the run level:
+
+it make sure all programs required to get system operational in that mode are started.
+For example:
+Graphical user mode requires a display manager service to run for GUI mode to work.
+
+In boot process system D is used as the init process in most Linux Distributions such as ubuntu 18.04 
+In Systemd runlevels are called targets.
+
+runlevel 5 is called Graphical target
+
+runlevel 3 is called multiuser.target.
+
+these are most commonly used targets.
+
+
