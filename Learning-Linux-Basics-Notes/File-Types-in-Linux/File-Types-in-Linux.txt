@@ -1,0 +1,41 @@
+Everything is a file in linux.
+Every object in linux can be considered to be a file.
+Even a directory is a special type of file.
+
+There are three types of Files:
+
+1).Regular File
+
+2).Directory 
+
+3).Special Files
+
+1).Regular File:  Images/Scripts/ configuration or data files.
+Regular File are most common type of files that contains some text, data or images.
+
+Example are configuration files, 
+shell scripts or code
+JPG files 
+et cetera.
+
+2).Directory: 
+Directory is a type of file as well that stores other files and directories within.
+
+The simplest example of directory file is your home directory.
+
+/home/bob is a directory.
+/root     is a directory
+/home/bob/code-directory  is a directory.
+
+3).Special Files:
+
+Special Files are subcatergorized into five other file types:
+
+1).Character Files: 
+These files represent devices under /dev file system that allow the OS to commmunicate to IO devices serially.
+Example includes devices such as the mouse and keyboard.
+
+2). Block files:
+Block file represent block devices also located under /dev.
+
+
