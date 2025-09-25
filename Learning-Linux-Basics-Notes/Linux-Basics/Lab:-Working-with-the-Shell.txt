@@ -1,0 +1,17 @@
+1).What is the home directory for the user called bob?
+The home directory of regular users is found under /home directory.
+Ans: /home/bob
+
+2).Which of the following commands will show you your home directory?
+If unsure, try out the commands in the terminal and find the answer!
+A: echo $HOME
+
+3).In the command echo Welcome, what does the word Welcome represent with respect to the command?
+A: argument is the argument passed to the command echo.
+
+4).What type of command is git?
+A: type git
+bob@caleston-lp10:~$ type git
+git is /usr/bin/git
+
+it is external command/file is the answer.
