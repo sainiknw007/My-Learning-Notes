@@ -1,0 +1,18 @@
+How to identity file types in Linux?
+
+One way to find out file type is using file command.
+
+file file or directory name
+Example:
+
+file /home/Michael/
+/home/Michael/: directory
+
+file bash-script.sh
+bash-script.sh: Bourne-Again shell script, UTF-8 Unicode text executable
+
+file insync1000.sock
+insync1000.sock: socket
+
+file /home/Michael/bash-script
+/home/Michael/bash-script: symbolic link to /home/sara/bash-script.sh 
