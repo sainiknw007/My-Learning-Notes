@@ -36,6 +36,26 @@ These files represent devices under /dev file system that allow the OS to commmu
 Example includes devices such as the mouse and keyboard.
 
 2). Block files:
-Block file represent block devices also located under /dev.
 
+Block files represents block devices, block files are located under /dev.
+a block device reads from and write to the devices in block or chunk of data.
 
+Example of block devices are hard disk and RAM.
+
+3).Links:
+Links in Linux is a way to associate 2 or more file names to the same set of file data.
+
+There are 2 types of links:
+1).Hard link: Hard link associates two or more file names that share the same block of data on the physical disk.
+Although they behave as independent files, deleting one link will delete the data.
+
+2).Softlink or Symbolic link: They symbolic link or symlink is like a shortcut in windows.
+softlink act as a pointer to another file.
+deleting softlink does not affect the data in the actual file.
+
+4).Socket Files:
+A socket is a special file that enables the communication between two processes.
+
+5).Named Pipes:
+Named pipes is a special type of file that allows connecting one process as an input to another process.
+The data flow in a pipe is unidirectional from the first process to the second.
