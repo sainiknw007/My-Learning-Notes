@@ -1,6 +1,6 @@
 How to identity file types in Linux?
 
-One way to find out file type is using file command.
+1).One way to find out file type is using file command.
 
 file file or directory name
 Example:
@@ -16,3 +16,19 @@ insync1000.sock: socket
 
 file /home/Michael/bash-script
 /home/Michael/bash-script: symbolic link to /home/sara/bash-script.sh 
+
+another way to find out file type is using
+
+2). ls or list storage command with -l flag with file or directory as the argument.'
+
+ls -ld /home/Michael
+drwxr-xr-x 3 root root 4096 Mar 18 17:20 /home/Michael
+
+letter d denotes that this is a directory
+
+Regular files identified by a dash -
+character devices by the letter c
+link is identified by lowercase letter l
+socket file is identified by letter s
+named pipes by the letter p
+block device by letter b 
