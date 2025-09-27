@@ -1,0 +1,57 @@
+Lab: Working with the Shell
+
+What is the home directory for the user called bob?
+/home/bob
+
+Which of the following commands will show you your home directory?
+Run the command echo $HOME and it should show the home directory of the current user.
+bob@caleston-lp10:~$ echo $HOME
+/home/bob
+
+
+In the command echo Welcome, what does the word Welcome represent with respect to the command?
+echo is the command and Welcome is the argument passed to the command.
+
+
+What type of command is git?
+bob@caleston-lp10:~$ type git
+git is /usr/bin/git
+
+Q.Create some directories! Refer to the below diagram and create the directory called birds
+The home directory /home/bob already exists.
+A: mkdir /home/bob/birds
+
+Q.Create the directories /home/bob/fish/salmon
+Use the -p option to create both directories in one go?
+A: Run: mkdir  -p /home/bob/fish/salmon
+
+Q.create all the remaining directories as per the diagram below.
+Run the following commands in any order:
+
+mkdir -p /home/bob/mammals/elephant
+
+mkdir -p /home/bob/mammals/monkey
+
+mkdir /home/bob/birds/eagle
+
+mkdir -p /home/bob/reptile/snake
+
+mkdir -p /home/bob/reptile/frog
+
+mkdir -p /home/bob/amphibian/salamander
+
+Q.Moving along. Lets now move the directory called frog from reptile to the directory amphibian
+Use the MV command
+
+mv /home/bob/reptile/frog /home/bob/amphibian
+
+
+Q. rename the directory snake to crocodile
+Use the MV command again
+
+mv /home/bob/reptile/snake /home/bob/reptile/crocodile
+
+Q. delete the directory called reptile along with its contents.
+explore rm -r command.
+
+rm -r /home/bob/reptile
