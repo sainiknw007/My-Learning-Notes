@@ -1,0 +1,24 @@
+File System Hierarchy:
+
+/home:  /home is the location that contains the home directories for all users except for the root user.
+
+root user home directory is located at /root.
+
+/opt: third party software are installed in /opt file. use to install web application.
+
+/mnt: /mnt is used to mount file system temporarily in the system.
+
+/tmp: the /tmp directory is used to store temporary data.
+
+
+/media: 
+When you have to copy some files from a USB drive and plugs it in the Linux system.
+you will notice that USB drive is not in a located such as G drive as you see in windows.
+external media is mounted under the /media file system.
+
+df or disk file system command prints out details about all the mounted file systems.
+you can see /dev/sda and USB disk is mounted under /media
+
+
+
+
