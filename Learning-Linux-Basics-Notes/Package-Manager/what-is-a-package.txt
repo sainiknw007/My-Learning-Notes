@@ -11,4 +11,23 @@ gimp.deb package contains all the softwar binaries and files needed for the imag
 That seems to be quite an easy process. Why do not we do that all the time,
 download a package and install it on the Linux OS.
 
+In simple terms:
+A package is a bundle of files that adds functionality to a system, application, or programming environment. It typically contains:
+
+Code (e.g., libraries or modules)
+Metadata (name, version, dependencies)
+Configuration files or scripts
+
+Examples:
+
+numpy (Python package)
+
+express (Node.js package)
+
+curl (Linux package)
+
+.deb file (Debian-based system package)
+
+.rpm file (Red Hat-based system package)
+
 Why there is need of different Package Managers?
