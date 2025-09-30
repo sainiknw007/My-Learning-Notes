@@ -1,1 +1,10 @@
+CentOS is Free version.
+CentOS is similar to Red Hat Enterprise Linux.
+CentOS is a community driven enterprise Operating system. 
+CentOS is formed from Red Hat.
+Community support.
 
+RHEL:
+RHEL is a paid version, paid subscription.
+With subscription you get Technical support for mission-critical systems and
+quicker accesss to latest features.
