@@ -1,1 +1,18 @@
+Introduction to Package management
+RPM and YUM
+APT and DPKG
+Labs: Package Management
+
+What is the difference between CentOS, RHEL and ubuntu ?
+Ans:
+There are many/100's of Linux distributions in use today. 
+One of the common way to categorize a Linux distribution is by the package manager it uses.
+
+For example:
+Distributions such as RHEL or RedHat Enterprise Linux, Fedora, CentOS are bases on RPM.
+hence they area known as RPM bases distributions.
+
+The Debian family including Ubuntu, Debian, Arch Linux, Linux Mint, et cetera, us Debian package manager dpkg.
+
+
 
