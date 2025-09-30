@@ -1,0 +1,14 @@
+What is a package?
+Software package is a compressed archieve that contains all the files that are required by particular software to run.
+
+For example: Let's consider you want to install a simple image editing software such as GIMP in ubuntu,
+GIMP GNU Image manipulation Program.
+
+You can use of gimp.deb package.
+
+gimp.deb package contains all the softwar binaries and files needed for the image editor to run along with metadata, which provides information about software itself.
+
+That seems to be quite an easy process. Why do not we do that all the time,
+download a package and install it on the Linux OS.
+
+Why there is need of different Package Managers?
