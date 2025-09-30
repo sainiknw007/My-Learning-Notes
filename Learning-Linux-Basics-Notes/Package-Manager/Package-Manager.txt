@@ -1,0 +1,30 @@
+Package Manager
+
+A package manager is a tool that automates the process of:
+
+Installing packages
+
+Updating packages
+
+Removing packages
+
+Resolving and installing dependencies
+
+It makes working with packages much easier and more reliable.
+
+Examples:
+
+pip (for Python)
+
+npm (for Node.js)
+
+apt (for Debian/Ubuntu)
+
+dnf or yum (for Red Hat/Fedora)
+
+brew (for macOS)
+
+🧠 In Simple Terms:
+Term	What It Is	Example
+Package	A piece of software or code module	requests (Python pkg)
+Package Manager	A tool to install/manage packages	pip install requests
