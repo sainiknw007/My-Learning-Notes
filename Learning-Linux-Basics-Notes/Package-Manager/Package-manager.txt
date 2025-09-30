@@ -12,7 +12,7 @@ For example:
 Distributions such as RHEL or RedHat Enterprise Linux, Fedora, CentOS are bases on RPM.
 hence they area known as RPM bases distributions.
 
-The Debian family including Ubuntu, Debian, Arch Linux, Linux Mint, et cetera, us Debian package manager dpkg.
+The Debian family including Ubuntu, Debian, Arch Linux, Linux Mint, et cetera, use Debian package manager dpkg.
 
 
 
