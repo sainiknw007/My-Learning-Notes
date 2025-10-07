@@ -1,0 +1,38 @@
+/sbin/init in Linux is the first user-space process that is started by the Linux kernel once the system has booted. It's a critical part of the system startup process.
+
+🔧 What /sbin/init Does:
+
+It is the "init" (initialization) process with Process ID 1 (PID 1).
+
+Responsible for:
+
+Initializing the system.
+
+Setting up the user space.
+
+Mounting file systems.
+
+Starting system services and daemons.
+
+Transitioning the system into the target runlevel (or boot target in newer systems).
+
+📜 Historical Context:
+
+Originally, Linux used the SysVinit system, and /sbin/init was a binary executable that read scripts from /etc/inittab to start services.
+
+Over time, different init systems have replaced the original SysVinit, but they usually maintain /sbin/init as a symbolic link for compatibility:
+
+📦 Modern Init Systems:
+Init System	/sbin/init Points To	Description
+SysVinit	Actual init binary	Legacy system.
+Upstart	/sbin/init → upstart	Ubuntu used it before switching to systemd.
+systemd	/sbin/init → /lib/systemd/systemd	Most modern Linux distributions (e.g., Ubuntu ≥15.04, CentOS 7+, Debian 8+).
+🔍 To Check What Your System Uses:
+
+Run:
+
+readlink -f /sbin/init
+
+OR
+
+sudo ls -l  /sbin/init
