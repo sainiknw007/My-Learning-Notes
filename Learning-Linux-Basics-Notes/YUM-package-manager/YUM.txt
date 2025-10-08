@@ -1,0 +1,18 @@
+1).YUM Package Manager:
+
+YUM mtlb Yellow Dog updater modifier
+YUM free and open source package manager hain
+YUM RPM based Linux system m work karta hain.
+YUM software repositories k sath kaam karta hain.
+Software repositories mtlb collection of packages..
+YUM package management n Dependencies managemt dono krta hain mtlb Dependencies ko resolve krta hain..
+Package ko install karne k liye dependent package ko install bhi install karta hain.
+
+repository information /etc/yum.repo.d m store hoti hain..
+repository file ka extension .repo hota hain..
+
+YUM ek higher level package manager hain but RPM par depend karta hain package management k liye,
+
+2).YUM Package kaise install karta hain:
+
+
