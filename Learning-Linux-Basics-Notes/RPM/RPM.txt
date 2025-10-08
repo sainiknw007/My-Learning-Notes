@@ -43,7 +43,7 @@ rpm database store system m jo jo package install h uska information store krta 
 
 rpm databasestore --> 
 kon kon se packages install h,
-each package ka konsa version hain,
+each package ka konsa version hain, ye information store karta hain.
 
 
 
