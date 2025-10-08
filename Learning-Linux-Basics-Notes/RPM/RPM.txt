@@ -45,6 +45,21 @@ rpm databasestore -->
 kon kon se packages install h,
 each package ka konsa version hain, ye information store karta hain.
 
+5). installed package ki information k liye hum
+rpm -q telnet.rpm command use krte hain.
+
+ye command /war/lib/rpm database store ko query karta hain package information k liye
+
+6). Package ko verify karne k liye use karte hain..
+rpm -Vf <path to file>
+upper case V
+
+Verify mtlb files jo packages installed kiya tha tab, vo original package se compare karta hain n check krta hain same hain ki
+data modify kiya hain..
+
+jab hum edit, permission change krenge to vo change dikhayga.
+
+RPM package dependencies resolve nahi karta hain.. isliye hum Higher Levele package manager YUM ka use karte hain..
 
 
 
