@@ -1,0 +1,52 @@
+RPM: Mtlb Red Hat Package Manager
+
+RPM Red Hat Enterprise Linux m use hota hain..
+CentOS m RPM use hota hain.
+Fedora k version m bhi use hota hain..
+
+rpm file ek software installer hota hain
+rpm m sab files hoti h jo software/package installation k liye  chahiye..version , dependencies ki information bhi hoti hain..
+rpm ka file extension .rpm hota hain.
+
+
+Working with RPM:
+
+RPM 
+package/software installation k liye use hota hain
+package/software uninstallation k liye use hota hain
+package upgrade krne k liye
+package query
+update package
+verify package
+
+package install krne k liye use command:
+
+rpm -ivh telnet.rpm
+
+i mtlb stands for install
+-V mtlb stands for Verbose, ye detail output print krta h command ka..
+-h mtlb Hash progress bar, jaise jaise install hota hain # show krta hain..
+
+Uninstall package krne k liye:
+
+rpm -e packagename.rpm # e mtlb erase uninstall
+
+existing package ko upgrade krne k liye
+
+rpm -Uvh telnet.rpm
+
+U Upper case.
+
+rpm database store system m jo jo package install h uska information store krta hain..
+
+/war/lib/rpm directory m rpm database store store hota h.
+
+rpm databasestore --> 
+kon kon se packages install h,
+each package ka konsa version hain,
+
+
+
+
+
+
