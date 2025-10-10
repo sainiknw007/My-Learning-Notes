@@ -54,10 +54,22 @@ ye command /war/lib/rpm database store ko query karta hain package information k
 rpm -Vf <path to file>
 upper case V
 
+-V mtlb verify
+-f mtlb ye file pata karo konse package ko belong karti hain
+and -Vf mtlb ye file jo package ko belong krti hain usse verify karna hain.
+
+package k files packge installation k bad se change hui hain kya..
+like file size
+file ka permission read/write/execute 
+owner
+group
+timestamp
+
 Verify mtlb files jo packages installed kiya tha tab, vo original package se compare karta hain n check krta hain same hain ki
 data modify kiya hain..
 
 jab hum edit, permission change krenge to vo change dikhayga.
+And verify ye bhi make sure karta hain 
 
 RPM package dependencies resolve nahi karta hain.. isliye hum Higher Levele package manager YUM ka use karte hain..
 
