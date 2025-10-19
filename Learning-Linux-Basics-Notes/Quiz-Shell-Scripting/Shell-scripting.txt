@@ -1,0 +1,108 @@
+Command line argument:
+$1 mtlb  the first command-line argument pass krte hain Bash script.
+
+Similarly:
+$0 → mtlb  script’s name
+$2, $3, … → mtlb  second command line argument , third command line argument pass krte h vo.
+$@ → sabhi argument as a list deta hain.
+$#  --> batata hain no. of arguments kiten hain.
+
+1).Let's update our script to use a command line variable in the place of lunar-mission
+Set the variable mission_name to the command line argument $1
+mission_name=$mission_name
+
+mkdir $mission_name
+
+rocket-add $mission_name
+
+rocket-start-power $mission_name
+rocket-internal-power $mission_name
+rocket-start-sequence $mission_name
+rocket-start-engine $mission_name
+rocket-lift-off $mission_name
+
+rocket-status $mission_name
+Ans:
+mission_name=$1
+
+mkdir $mission_name
+
+rocket-add $mission_name
+
+rocket-start-power $mission_name
+rocket-internal-power $mission_name
+rocket-start-sequence $mission_name
+rocket-start-engine $mission_name
+rocket-lift-off $mission_name
+
+rocket-status $mission_name
+
+Call script like
+create-and-launch-rocket mars-mission
+
+2). bob@caleston-lp10:~$ /home/bob/create-and-launch-rocket
+-su: /home/bob/create-and-launch-rocket: Permission denied
+Ans: provide execute permission to the script.
+chmod +x /home/bob/create-and-launch-rocket
+
+3).Update the script to use 2 command line variables $1 and $2 for country and capital respectively. When the script is executed it should now print the country and its capital using the values passed in as command line arguments.
+eg: ./print-capital.sh Nigeria Abuja should print Capital city of Nigeria is Abuja
+Ans:
+this is the script:cat print-capital.sh 
+echo "Capital city of UK is London"bob@caleston-lp10:~$ vim print-capital.sh 
+
+Ans: Changed to below and run.
+echo "Capital city of $1 is $2"
+Run/execute the script like this:
+./print-capital.sh Nigeria Abuja
+Capital city of Nigeria is Abuja
+
+4). 
+# This script creates a backup of a given file by creating a copy as bkp
+# For example some-file is backed up as some-file_bkp
+set -e                             --> exit karega jab koe command fail hota h tab
+file_name="some-file"              --> varible define kiya n value diya hain some-file
+cp $file_name ${file_name}_bkp     --> copy karega source destination
+echo "Done"
+Ans: 
+set -e ----> koe bhi command fail hota h to script ko exit karega, 
+yadhi set -e nahi mention krte script m to, 1 command fail hota hain to script next command run karta hain continue.
+
+update script:
+# This script creates a backup of a given file by creating a copy as bkp
+# For example some-file is backed up as some-file_bkp
+set -e
+
+file_name=$1
+
+cp $file_name ${file_name}_bkp
+
+echo "Done"
+
+and run now
+backup.sh create-and-launch-rocket
+
+5).bob@caleston-lp10:~$ cat /home/bob/update_shell.sh 
+new_shell="$2"
+user_name="$1"
+How many command line argument above script has:
+Ans: 2
+
+6).The usermod -s command in Linux is used to change a user's login shell.
+
+🧩 Syntax
+usermod -s SHELL USERNAME
+
+
+-s (or --shell) → specifies the new login shell.
+
+USERNAME → the target user account.
+
+🧠 Example
+
+To change the login shell of user john to /bin/bash:
+
+sudo usermod -s /bin/bash john
+
+
+
