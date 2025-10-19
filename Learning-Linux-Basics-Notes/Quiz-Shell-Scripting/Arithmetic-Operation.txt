@@ -1,0 +1,44 @@
+Arithmetic-Operation-Part-03
+
+
+
+expr 6 + 3
+9
+expr 6 - 3
+3
+expr 6 / 3
+2
+expr 6 * 3
+18
+
+A=6
+B=3
+expr $A + $B
+9
+
+expr $A - $B
+3
+
+expr $A * $B
+18
+
+expr $A / $B
+2
+
+echo $((++A))  ---> increment A by 1 mtlb A+1 and 
+echo $((--A))  -----> decrement value by 1 A-1 karta h print karta hain
+echo $((A++)) --> like c/c++ Pehle A ki value print karega phir A ko by 1 increment karega A+1
+echo $((A--))   --> like c/C++ Pehle A ki value print karega phir A by 1 se decrement karega A-1
+
+
+expr does not support floating point expression.
+double parentheses echo does not support floating point expression.
+
+example 
+expr 10 / 3
+3 
+
+instead use:
+
+expr $A / $B | bc -1
+3.3333
