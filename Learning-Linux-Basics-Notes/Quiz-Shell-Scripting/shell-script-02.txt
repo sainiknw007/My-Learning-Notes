@@ -21,3 +21,24 @@ OR
 
 price=$(( $1 * $2 ))
 echo "The total price for items is ${price} dollars"
+
+2). write a script calculate-total-apples.sh and it prints the number of total apples using the formula 
+total_apples = baskets x apples_per_basket.
+Ans:
+baskets=4
+apples_per_basket=5
+
+total_apples=$( expr $baskets \* $apples_per_basket)
+
+echo "Total Apples = ${total_apples}"
+
+3).Create a new script called calculate-average.sh. The script should accept exactly 3 command-line arguments and calculate the average.
+The result should not round the value to the nearest integer.
+Ans:
+num1=$1
+num2=$2
+num3=$3
+sum=$(( num1 + num2 + num3 ))
+average=$(echo "$sum / 3" | bc -l)
+echo $average
+
