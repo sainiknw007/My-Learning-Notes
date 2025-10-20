@@ -117,5 +117,34 @@ echo "Product is $(( A * B))"
 
 echo "Quotient is $(( A / B))"
 
+8). Update the calculation.sh script to use two command line arguments $1 and $2 instead of the statically defined values for A and B.
+Once done, you should be able to pass in the value for both variables like this ./calculation.sh 10 5
+Note: If you are using command line variables directly within the expression $(( )) then you must use $1 and $2 and not just 1 and 2 eg: $(( $1 + $2 )).
+Ans:
+Way: 1
+A=$1
+B=$2
+
+echo "Sum is $((A+B)) "
+
+echo "Difference is $((A-B)) "
+
+echo "Product is $((A*B)) "
+
+echo "Quotient is $((A/B)) "
+
+Way 2:
+A=$1
+B=$2
+
+echo "Sum is $(($1+$2)) "
+
+echo "Difference is $(($1-$2)) "
+
+echo "Product is $(($1*$2)) "
+
+echo "Quotient is $(($1/$2)) "
+~                                   
+
 
 
