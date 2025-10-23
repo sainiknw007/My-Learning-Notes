@@ -3,7 +3,11 @@ Q2. What is the value of the environment variable TERM?
 Q3. What is the value of env varilable TERM?
 
 
-Q1.how to change current bash shell to borne shell.
+Q1. What is the current bash shell ?
+Ans: echo $SHELL
+SHELL env varibale store user current shell.
+
+Q2.how to change current bash shell to borne shell.
 Ans:
 
 sudo chsh -s /bin/sh
@@ -74,6 +78,20 @@ sshd:x:104:65534::/run/sshd:/usr/sbin/nologin
 bob:x:1000:1000::/home/bob:/bin/sh
 mercury:x:1001:1001::/home/mercury:/bin/sh
 statd:x:105:65534::/var/lib/nfs:/usr/sbin/nologin
+
+Q2. explain this bob:x:1000:1000::/home/bob:/bin/sh
+Ans:
+bob:x:1000:1000::/home/bob:/bin/sh
+contains 7 fields, separated by :. Let’s break it down:
+
+Field	Value	Meaning
+1	bob	Username
+2	x	Password placeholder → actual password stored securely in /etc/shadow
+3	1000	UID (User ID) → identifies the user
+4	1000	GID (Group ID) → primary group of the user
+5	(empty)	Comment field (GECOS) → meant for full name or info, but not set here
+6	/home/bob	User’s home directory
+7	/bin/sh	Default login shell (here Bob uses /bin/sh instead of /bin/bash)
 -------------------------------------------------------------------------------------
 
 Q2. What is the value of the environment variable TERM?
