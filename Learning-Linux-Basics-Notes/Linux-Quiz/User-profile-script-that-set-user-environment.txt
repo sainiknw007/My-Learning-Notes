@@ -1,0 +1,20 @@
+Q. User script that set user environment:
+Ans:
+User profile scripts, such as ~/.profile, ~/.bash_profile, ~/.bashrc, and others, are executed when a user logs in,
+allowing the setup of the environment according to personal preferences.
+
+To make changes persistent in Unix-like operating systems, variables, aliases, and 
+other configurations can be added to these profile files.
+
+For example, to add a variable using the command line:
+
+echo 'export MY_VARIABLE="example_value"' >> ~/.profile
+
+This command appends the export statement to the end of the ~/.profile file, making the variable MY_VARIABLE persistent across sessions.
+
+To add an alias, like ll for ls -l, use:
+
+echo 'alias ll="ls -l"' >> ~/.profile
+
+
+
