@@ -32,6 +32,15 @@ grep → search for matching text in a file.
 bob: → literal string bob:.
 
 /etc/passwd → file that stores user account information.
+
+Verification: Confirm the Shell Has Been Changed
+Check the Password File
+Run this command to verify the shell change:
+
+grep "^bob:" /etc/passwd
+Expected Output:
+
+bob:x:1000:1000::/home/bob:/bin/sh
 -------------------------------------------------------------------------------------
 
 Q2. What is the value of the environment variable TERM?
