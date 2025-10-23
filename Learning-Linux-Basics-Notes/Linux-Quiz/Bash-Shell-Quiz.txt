@@ -160,3 +160,40 @@ Terminal emulator provides the window to run shell and display colors.
 
 TERM=xterm-256color → links the two by telling programs which terminal type to emulate.
 
+Q4.Create a new environment variable called PROJECT=MERCURY and make it persistent by adding the variable to the ~/.profile file.
+Ans:
+Create a new environment variable called PROJECT=MERCURY and make it persistent by adding the variable to the ~/.profile file.
+bob@caleston-lp10:~$ echo 'export PROJECT=MERCURY' >> ~/.profile
+bob@caleston-lp10:~$ source ~/.profile
+bob@caleston-lp10:~$ echo $PROJECT
+MERCURY
+
+Q5. Which of the following directories is NOT part of the PATH variable?
+Ans: inspect echo $PATH
+
+Q6.Set an alias called up for the command uptime and make it persistent by adding to ~/.profile file.
+Ans:
+Step 1: Add the Alias to ~/.profile for Persistence
+Run this command to add the alias permanently:
+Option 1:
+
+echo 'alias up=uptime' >> ~/.profile 
+Option 2:
+
+echo "alias up='uptime'" >> ~/.profile
+Option 3:
+
+echo 'alias up=uptime' >> /home/bob/.profile
+Step 2: Load the Alias into the Current Session:
+
+To use the alias immediately into the current shell session immediately:
+
+source ~/.profile
+Verification:
+Run this command to check if the alias works:
+
+up
+Expected Output:
+Shows system uptime information:
+
+11:40:02 up 45 min,  0 users,  load average: 2.50, 3.09, 3.81
