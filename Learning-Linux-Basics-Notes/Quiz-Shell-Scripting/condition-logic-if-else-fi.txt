@@ -138,16 +138,18 @@ String 1 is not equal to String 2
 ----------------------------------------------------------------------------------------------
 Q2.Write a script to check 1 string is not equal to other string. using not equal to operator.
 Way-1).
+-----------------------------------------------------------------------------------------------
 if [ "abc" != "abc" ]
 then
         echo "String 1 is not equal to string 2"
 else 
         echo "String 1 is  equal to String 2"
 fi
+-----------------------------------------------------------------------------------------------
 Run:
 ./check_string_equal.sh 
 String 1 is  equal to String 2
-
+-----------------------------------------------------------------------------------------------
 Way-2).
 if [ $1 != $2 ]  
 then
@@ -155,14 +157,30 @@ then
 else 
         echo "String 1 is  equal to String 2"
 fi
+-----------------------------------------------------------------------------------------------
 Run:
 bob@caleston-lp10:~$ ./check_string_equal.sh abc abc
 String 1 is  equal to String 2
 bob@caleston-lp10:~$ ./check_string_equal.sh abc abv
 String 1 is not  equal to string 2
+------------------------------------------------------------------------------------------------------------------
+Q6. whether a command-line argument is not provided using -z
+Ans: save script check-command-line-argument.sh
+-------------------------------------------------------------------------------------------------------------------
+if [ -z "$1" ]; then
+    echo "No argument provided."
+    exit 1
+fi
+echo "Argument provided: $1"
+--------------------------------------------------------------------------------------------------------------------
+Run: 
+$ ./script.sh
+No argument provided.
 
+$ ./script.sh hello
+Argument provided: hello
+-------------------------------------------------------------------------------------------------------------------
 
------------------------------------------------------------------------------------------------
 Q3. Write a script to check 1 string is not equal to other string.
 Ans:
 
