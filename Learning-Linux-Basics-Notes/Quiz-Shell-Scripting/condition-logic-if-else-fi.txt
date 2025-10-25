@@ -106,36 +106,67 @@ then
   echo December
 fi
 ---------------------------------------------------
-
-Q1.Write a script to check 1 string is equal to other string.
-
+Q5.Write a script to check 1 string is equal to other string.
+Ans:
 if [ "abc" = "abc" ]
 then
-	echo "String 1 is exactly equal to string 2"
-else
-	echo "String 1 is not equal to string 2"
+        echo "String 1 is equal to string 2"
+else 
+        echo "String 1 is not equal to String 2"
+fi
+RUN: Check script has execute permission.
+chmod +x check_string_equal.sh 
+./check_string_equal.sh 
+String 1 is equal to string 2
+
+			OR   (by passing two string and check string are equal or not)
+
+if [ $1 = $2 ]
+then
+        echo "String 1 is equal to string 2"
+else 
+        echo "String 1 is not equal to String 2"
 fi
 
+RUN: pass two string.
+./check_string_equal.sh abc abc
+output:
+String 1 is equal to string 2
+
+ ./check_string_equal.sh abc axc
+String 1 is not equal to String 2
 ----------------------------------------------------------------------------------------------
-Q2.Write a script to check 1 string is not equal to other string.
-
-if [ "abc" != "abc"] or 
-then 
-	echo "string 1 is not equal to string 2"
-else 	
-	echo "String 1 is equal string 2"
-
+Q2.Write a script to check 1 string is not equal to other string. using not equal to operator.
+Way-1).
+if [ "abc" != "abc" ]
+then
+        echo "String 1 is not equal to string 2"
+else 
+        echo "String 1 is  equal to String 2"
 fi
+Run:
+./check_string_equal.sh 
+String 1 is  equal to String 2
+
+Way-2).
+if [ $1 != $2 ]  
+then
+        echo "String 1 is not equal to string 2"
+else 
+        echo "String 1 is  equal to String 2"
+fi
+Run:
+bob@caleston-lp10:~$ ./check_string_equal.sh abc abc
+String 1 is  equal to String 2
+bob@caleston-lp10:~$ ./check_string_equal.sh abc abv
+String 1 is not  equal to string 2
+
 
 -----------------------------------------------------------------------------------------------
 Q3. Write a script to check 1 string is not equal to other string.
+Ans:
 
-if [ "acb" != "abc"]
-then 
-	echo "string is not equal to string 2"
-else 
-	echo "String is equal to string 2"
-fi
+
 
 ------------------------------------------------------------------------------------------------
 
