@@ -105,3 +105,37 @@ elif [ $month_number -eq 12 ]
 then
   echo December
 fi
+---------------------------------------------------
+
+Q1.Write a script to check 1 string is equal to other string.
+
+if [ "abc" = "abc" ]
+then
+	echo "String 1 is exactly equal to string 2"
+else
+	echo "String 1 is not equal to string 2"
+fi
+
+----------------------------------------------------------------------------------------------
+Q2.Write a script to check 1 string is not equal to other string.
+
+if [ "abc" != "abc"] or 
+then 
+	echo "string 1 is not equal to string 2"
+else 	
+	echo "String 1 is equal string 2"
+
+fi
+
+-----------------------------------------------------------------------------------------------
+Q3. Write a script to check 1 string is not equal to other string.
+
+if [ "acb" != "abc"]
+then 
+	echo "string is not equal to string 2"
+else 
+	echo "String is equal to string 2"
+fi
+
+------------------------------------------------------------------------------------------------
+
