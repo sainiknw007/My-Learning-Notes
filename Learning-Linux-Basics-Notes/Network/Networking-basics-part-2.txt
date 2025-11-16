@@ -1,0 +1,31 @@
+Q.Jab app ping krte hain external website:
+
+~]$ ping www.facebook.com
+ping: www.facebook.com: Temporary failure in name resolution
+
+facebook.com apne dns server par bhi nahi na ki hosts file main,
+So, app /etc/resolv.conf file m entry kr skte hain jaise:
+
+
+~]$ cat >> /etc/resolv.conf
+nameserver 192.168.1.100
+nameserver 8.8.8.8
+
+8.8.8.8 ye public dns hain, Google DNS Server jisse sub site k dns resolution krta hain , pata h 
+
+Local /etc/resolv.conf m entry k bajay app, DNS Server par entry kr skte hain:
+
+Forward ALL to 8.8.8.8
+
+Ab app external sites browse kar skte hain jaise www.facebook.com or bhi exteernal sites.
+
+try
+ping www.facebook.com
+64 bytes from www.facebook.com 157.240.13.35
+
+humne browse kiya www.facebook.com
+www
+.com
+ye domain names hain.
+
+
