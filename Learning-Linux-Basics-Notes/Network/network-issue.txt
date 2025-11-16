@@ -1,0 +1,19 @@
+Site http://caleston-repos accessible hain office k internal network se..
+mtlb jab lan se conncet h laptop/computer or wifi jo secure network hain.
+
+Par apke laptop se accessible nahi hain aap commpany n network se connected nahi hain
+home wifi se connceted hain or home lan mtlb office network nahi.
+
+The site cannot be reached.
+
+ServiceNow m ek ticket create kiya, network team se, site is  not working on my laptop.
+
+vo ho skta hain
+not a valid DNS nahi hain.
+mtlb client machine us site ka ip search nahi kar pa raha hain.
+
+
+
+
+
+
