@@ -1,0 +1,74 @@
+Q1). What is the IP address of the DNS Server used in this system?
+Ans:
+Run: cat /etc/resolv.conf and look for the line starting with nameserver.
+The IP after nameserver is the DNS server used by the system.
+Practical:
+bob@caleston-lp10:~$ cat /etc/resolv.conf
+search caleston.ca
+nameserver 127.0.0.11
+options ndots:5
+
+Q2).Which file is responsible for host file-based DNS resolution?
+Ans: The answer is /etc/hosts. Check this file and inspect the entries.
+
+Q3). What is the configuration file used for the DNS Server?
+Ans: The answer is /etc/resolv.conf. You can see the DNS Server configuration in this file.
+
+Q4). Change the DNS Server to Google's DNS which is 8.8.8.8.
+Ans:
+Edit the file located at /etc/resolv.conf and update the nameserver IP address to 8.8.8.8
+Before:
+bob@caleston-lp10:~$ cat /etc/resolv.conf
+search caleston.ca
+nameserver 127.0.0.11
+options ndots:5
+Update as below:
+
+bob@caleston-lp10:~$ cat /etc/resolv.conf
+search caleston.ca
+nameserver 8.8.8.8
+options ndots:5
+
+Q5).What is the current order utilized by the system to resolve an IP address?
+Ans: Hint: Please examine the contents of the /etc/nsswitch.conf file.
+Check:
+bob@caleston-lp10:~$ cat /etc/nsswitch.conf
+# /etc/nsswitch.conf
+#
+# Example configuration of GNU Name Service Switch functionality.
+# If you have the `glibc-doc-reference' and `info' packages installed, try:
+# `info libc "Name Service Switch"' for information about this file.
+
+passwd:         compat systemd
+group:          compat systemd
+shadow:         compat
+gshadow:        files
+
+hosts:          files dns
+networks:       files
+
+protocols:      db files
+services:       db files
+ethers:         db files
+rpc:            db files
+
+/etc/hosts files then DNS Server is the order.
+
+Q6). Change the order of resolution to DNS first and then hosts.
+# /etc/nsswitch.conf
+hosts:          dns files
+networks:       files
+Ans:
+hosts:          dns files
+networks:       file
+
+Q7). Which search domain is configured in this system ?
+Hint: Inspect the DNS configuration file.
+Ans: suppose this is the file:
+
+bob@caleston-lp10:~$ cat /etc/resolv.conf
+search caleston.ca
+nameserver 8.8.8.8
+options ndots:5
+
+search domain is caleston.ca
