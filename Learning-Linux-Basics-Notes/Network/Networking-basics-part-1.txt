@@ -120,6 +120,40 @@ Sabhi server kaha point krenge
 A, B , C se Z system -------> DNS Server ko.
 how?
 DNS Server ka IP hain: 192.168.1.100 Ok
+So, Jab bhi A, B or Z server host se connect krne k liye pehle DNA m ip address find krta hain.
+
+Iska mtlb ye nahi h ki, hum /etc/hosts file m entry nahi kr skte, only /etc/resolv.conf m hi krna hain.
+Suppose apke pass ek Test Server jo aap hi access karenge so,
+App /etc/hosts m entry kar skte hain..
+becuase you only will be using, others will not use that server
+Refer image: Test server entry only in Host A Server /etc/hosts file.
+Ab apka System Test server ko resolve kar payga, as you have an entry in hosts file
+
+> Yah apke hosts file m entry hain like
+cat /etc/hosts
+192.168.1.115 test
+
+and 
+cat /etc/resolv.conf 
+192.168.1.116 test
+
+so jo server par h hum, vo pehle hosts file m test server ka ip address find krne k try karega,
+then 
+nahi mila to resolv.conf m jaata hain.
+
+Ye order change bhi kar skte hain:
+Pehel vo 
+hosts m search krna hain 
+phir dns /etc/resolv.conf file main
+
+ye order define hota hain:
+/etc/nsswitch.conf
+...
+hosts:    files dns
+...
+
+
+
 
 har host/server par ek DNS resoution configuration file hota hain.
 cat /etc/resolv.conf
