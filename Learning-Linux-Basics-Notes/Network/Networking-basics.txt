@@ -48,6 +48,7 @@ jaise hi ping krte hain vo jaata hain kaha host file m check krne ye host ka ip 
 nahi to bolta hain unknown host db.
 Par A ye check nahi krta hain ki Host B ka hostname kya hain.
 
+/etc/hosts source of host hain A k liye...
 
 
 
