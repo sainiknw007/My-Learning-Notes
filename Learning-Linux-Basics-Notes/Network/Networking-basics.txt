@@ -1,0 +1,55 @@
+DNS
+DNS Labs
+Network Basics:
+Labs: Network BAsic
+
+What is DNS in Linux ?
+Ans:
+A and B do computer hain. dono same network m hain 192.168.1.0 network m..
+A ka ip hain 192.168.1.10 and 
+B ka ip hain 192.168.1.11
+
+A computer par run krte hain 
+ping 192.168.1.11   ---> A se B ka connectivity check krna k liye
+reply
+reply 
+
+B humara DB Database Server hain.
+jo hum kya krte hain.. 
+
+ping db
+ping unknown host db
+
+kyoki db se ip nahi araha hain.
+
+so hu mky karte ha
+
+
+A system ko batana chahte ki 
+m ping db karo
+so db mtlb hain B system uska ip hain 192.168.1.11
+
+vo krte hain hosts file m entry krke..
+
+vim /etc/hosts krke usme ek entry add krte hain
+192.168.1.11 db
+
+Ab hum A Computer se ping krte hain B ko
+
+like
+ping db
+64 bytes from db 192.168.1.11
+
+Now hume reply araha hain.
+
+So, humne bataya 192.168.1.11 ka hostname hain db..	
+
+jaise hi ping krte hain vo jaata hain kaha host file m check krne ye host ka ip hain kya
+nahi to bolta hain unknown host db.
+Par A ye check nahi krta hain ki Host B ka hostname kya hain.
+
+
+
+
+
+
