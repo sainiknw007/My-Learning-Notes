@@ -1,0 +1,87 @@
+Q1). Which IP addresses are assigned to Bob's Laptop on its primary network interfaces ?
+Note : Ignore Docker’s internal interfaces.
+Ans:
+Run: ip a on Bob's Laptop and look for the inet IP addresses on interfaces named eth0 and eth1.
+16: eth1@if17: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:ac:10:ef:bb brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 172.16.239.187/24 brd 172.16.239.255 scope global eth1
+       valid_lft forever preferred_lft forever
+20: eth0@if21: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:ac:10:ee:bb brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 172.16.238.187/24 brd 172.16.238.255 scope global eth0
+       valid_lft forever preferred_lft forever
+
+Q2).What is the name of the interface that has the IPs (from the previous question) address assigned?
+Ans: eth0 , eth1
+
+Q3). What is the default gateway configured in the system?
+Ans:
+Run the command ip r to view your routing table. 
+The default entry will display the gateway IP address utilized for directing traffic beyond the local network.
+
+In this lab scenario, the expected gateway IP address is 172.16.238.1, 
+which represents the first usable IP address in your subnet and serves as the gateway router.
+
+bob@caleston-lp10:~$ ip r
+default via 172.16.238.1 dev eth0 
+172.16.238.0/24 dev eth0 proto kernel scope link src 172.16.238.187 
+172.16.239.0/24 dev eth1 proto kernel scope link src 172.16.239.187 
+172.17.0.0/16 dev eth2 proto kernel scope link src 172.17.0.4 
+
+----Ans: default via 172.16.238.1 dev eth0 ----------
+
+Q4). Instructions:
+We have an apache server which should be accessible at hostname devapp01-web.
+This server runs on port 80 and should be accessible from Bob's laptop.
+
+However, something seems to be wrong with the network!
+Check if you are able to connect to the HTTP port 80 on the server devapp01-web from Bob's laptop?
+
+To test the connection, run a Telnet command on port 80 for the host devapp01-web.
+Ans: Perform practical:
+bob@caleston-lp10:~$ telnet devapp01-web 80
+Trying 172.16.238.10...
+telnet: Unable to connect to remote host: No route to host
+
+Q5). Are you able to ping devapp01-web server?
+Ans:
+bob@caleston-lp10:~$ ping devapp01-web
+PING devapp01-web (172.16.238.10): 56 data bytes
+92 bytes from caleston-lp10 (172.16.238.187): Destination Host Unreachable
+92 bytes from caleston-lp10 (172.16.238.187): Destination Host Unreachable
+
+Q6).Luckily, this webserver has two interfaces. The second interface is on another network and is identified by the name devapp01. 
+Check if you are able to ping devapp01
+Is ping working now?
+Ans:
+bob@caleston-lp10:~$ ping devapp01
+PING devapp01 (172.16.239.10): 56 data bytes
+64 bytes from 172.16.239.10: icmp_seq=0 ttl=64 time=0.147 ms
+64 bytes from 172.16.239.10: icmp_seq=1 ttl=64 time=0.107 ms
+64 bytes from 172.16.239.10: icmp_seq=2 ttl=64 time=0.111 ms
+Yes ping is working.
+
+Q7).Let's troubleshoot from the other end. SSH to the webserver by running ssh devapp01
+Ans:
+ssh devapp01 
+entery password when ask fro password
+
+Q8).Inspect the interface eth0 on devapp01, is it UP?
+Ans: check with 
+ip a 
+or
+ip link command
+14: eth0@if15: <BROADCAST,MULTICAST> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default 
+eth0 interface is down.
+
+Q9). Bring up the eth0 interface
+Ans:
+sudo ip link set dev eth0 up
+check up or not
+ip link or ip a command
+14: eth0@if15: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default 
+
+Q10). While we are at it, there is also a missing default route on the server devapp01.
+Add the default route via eth0 gateway.
+Ans: 
+sudo ip r add default via 172.16.238.1
