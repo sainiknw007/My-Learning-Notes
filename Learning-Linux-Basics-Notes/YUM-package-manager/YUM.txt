@@ -15,8 +15,20 @@ repository information /etc/yum.repo.d m store hoti hain..
 repository file ka extension .repo hota hain..
 
 YUM ek higher level package manager hain but RPM par depend karta hain package management k liye,
-YUM automatic dependency resolve karta hain.
+YUM automatic dependency resolve karta hain base package ko install krne k liye.
 
 2).YUM Package kaise install karta hain:
+>YUM Package Manager:
+
+>YUM depend karta hain software repository (jisme 100s or thousands of packages hote h)
+> Ye software repositories local bhi ho skti hain mtlb system par install hain
+
+> ye repositories remote bhi ho skt hain jisko hum HTTP/HTTPS/FTP protocol se access kr skte hain.
+
+> Repository k information /etc/yum.repos.d main present hota hain
+.d mtlb directory
+
+> YUM phir RPM Package Manager ka use krta hain system par package ko install krne k liye
+
 
 
