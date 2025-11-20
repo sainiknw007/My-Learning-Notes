@@ -1,0 +1,77 @@
+YUM and RPM 
+Q1).Which of the following package managers would you use on this machine (centos-lab)?
+Ans: Centos makes use of RPM and YUM
+
+Q2). Which command list all installed RPM packages on the system ?
+Ans: rpm -qa
+rpm — the RPM package manager
+-q — query
+-a — all packages
+
+Q3). Which command list all installed yum packages on the system ?
+Ans:
+sudo yum list --> list all packages installed and available
+available packages comes from remote repo defined in /etc/yum.repos.d/
+ls yum.repos.d
+/etc/yum.repos.d/rocky.repo
+/etc/yum.repos.d/epel.repo
+/etc/yum.repos.d/appstream.repo
+
+Each repo points to a remote server,
+These rocky.repo or epel.repo contains url
+baseurl=https://mirror.centos.org/$releasever/BaseOS/x86_64/os/
+
+sudo yum list installed --> only show installed packages.
+sudo yum available ---> only show available packages in repo
+sudo yum list updates   --> show packages that have update available
+
+Q4).Use an rpm command and find out the exact package name for wget installed in this server (centos-lab).
+Ans:
+[bob@centos-lab ~]$ rpm -qa | grep 'wget'
+wget-1.21.1-8.el9.x86_64
+
+Q5).The package for the firefox browser has been downloaded under /home/bob in the centos-lab server.
+Try to install it using RPM.
+Ans:
+
+Q6). What is rpm database ?
+Ans: RPM database: /var/lib/rpm/
+rpm -qa shows all installed packages from the database /var/lib/rpm
+
+Q7). Installed a package firefox available /home/bob ?
+Ans:
+[bob@centos-lab ~]$ rpm -q firefox
+package firefox is not installed
+
+sudo rpm -ivh  /home/bob/firefox-128.6.0-1.el9.x86_64.rpm
+
+Q8).Let's use YUM to install the firefox on the centos-lab server.
+Ans:
+Run: - sudo yum install firefox -y on the centos-lab server.
+Check installed package:
+[bob@centos-lab ~]$ sudo yum list installed firefox
+Installed Packages
+firefox.x86_64                    140.5.0-1.el9                    @appstream
+
+Q9).How many software repositories are configured for YUM in the centos-lab server?
+Ans: 6
+[bob@centos-lab ~]$ sudo yum repolist
+repo id             repo name
+appstream           CentOS Stream 9 - AppStream
+baseos              CentOS Stream 9 - BaseOS
+epel                Extra Packages for Enterprise Linux 9 - x86_64
+epel-cisco-openh264 Extra Packages for Enterprise Linux 9 openh264 (From Cisco) - x86_64
+epel-next           Extra Packages for Enterprise Linux 9 - Next - x86_64
+extras-common       CentOS Stream 9 - Extras packages
+
+Q10).Which package provides the tcpdump command on the centos-lab server?
+Ans:tcpdump-14:4.99.0-6.el9.x86_64
+
+[bob@centos-lab ~]$ sudo yum provides tcpdump
+Last metadata expiration check: 0:21:38 ago on Thu Nov 20 00:38:47 2025.
+tcpdump-14:4.99.0-6.el9.x86_64 : A network traffic monitoring tool
+Repo        : appstream
+Matched from:
+Provide    : tcpdump = 14:4.99.0-6.el9
+
+ 
