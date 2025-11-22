@@ -1,0 +1,48 @@
+RHEL 9.6 uses DNF as its package manager.
+
+However, the yum command still exists, but:
+
+✅ yum on RHEL 9.6 is just a symlink (alias) to dnf.
+
+So effectively:
+
+yum  →  dnf
+
+
+They run the same backend, produce the same output, and behave identically.
+
+✔ Why?
+
+Starting from RHEL 8, Red Hat replaced YUM v3 with DNF (Dandified Yum) because it:
+
+Has better dependency resolution
+
+Supports modularity
+
+Is faster and more stable
+
+Has improved memory handling
+
+To help with compatibility, they kept the yum command but made it point to DNF.
+
+🔍 You can confirm on any RHEL 9 system with:
+which yum
+
+
+You’ll see something like:
+
+/usr/bin/yum -> dnf
+
+
+Or check version:
+
+yum --version
+dnf --version
+
+
+Both will show DNF 4.x.
+
+⭐ Final Answer:
+RHEL 9.6 uses DNF as the real package manager.
+
+yum still works but is just a wrapper for DNF.
