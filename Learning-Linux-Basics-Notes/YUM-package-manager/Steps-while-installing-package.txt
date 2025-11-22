@@ -9,5 +9,12 @@ Yum repository repos.d m package check krta hain available h kya.
 dependent package bhi already install h kya vo bhi dekhte hain or usko upgrade krna hain kya
 
 Phir transaction summary display krta hain, user k review krne k liye. and ask for confirmation
-proceed krna h package install so yes type n enter kro
+proceed krna h package install so yes type n enter kro.
+
+YUM shows:
+
+Packages to be installed
+Packages to be updated (if needed)
+Dependencies to be installed
+Total download size
 
