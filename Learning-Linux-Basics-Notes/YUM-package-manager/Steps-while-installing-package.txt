@@ -1,0 +1,13 @@
+Sequence of steps while installing pacakge:
+Package install krte hain jab jab kya kya steps hote hain:
+
+1). yum install httpd : it first perform transaction check.
+Jab yum install command issue krte hain, yum first Transaction Check run krta hain:
+Yum read karta hain /etc/yum.conf file under /etc/yum.repos.d (metadata old h to update krta hain)
+
+Yum repository repos.d m package check krta hain available h kya.
+dependent package bhi already install h kya vo bhi dekhte hain or usko upgrade krna hain kya
+
+Phir transaction history display krta hain, user k review krne k liye.
+
+2).
