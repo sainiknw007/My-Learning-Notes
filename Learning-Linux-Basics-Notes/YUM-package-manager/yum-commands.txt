@@ -27,3 +27,21 @@ Matched from:
 Filename    : /usr/bin/scp
 
 SCP command is offered by open source ssh client applications.
+
+4). yum remove httpd
+to remove/uninstall any package.
+
+5). yum update package-name
+
+to update a single package example:
+yum update telnet
+to update telnet package.
+
+already latest update hain so bolega, no packages marked for update.
+
+5). To update all packages/ sabhi package ko update krna hain to command is:
+yum update 
+without any argument
+
+ye command sabhi packages ko check karega jo update krna hain..
+dependency check karega.. jo dependent package update kr k liye
