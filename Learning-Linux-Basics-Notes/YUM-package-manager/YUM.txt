@@ -30,5 +30,26 @@ YUM automatic dependency resolve karta hain base package ko install krne k liye.
 
 > YUM phir RPM Package Manager ka use krta hain system par package ko install krne k liye
 
+Usually RHEL OS software repositories k sath aata hain.
+
+Redhat OS active Subscription k sath liya hain apne, 
+Ek file milega redhat.repo    
+
+/etc/yum.repos.d/redhat.repo   directory main.
+
+ye repository file official RedHat managed software repository ko point karta hain
+specific version of the OS k liye.
+
+yahi apko Redhat official repo use nahi karna hain to,
+App same directory /etc/yum.repos.d/ m add kr skte hain like
+
+/etc/yum.repos.d/nginx.repo
+
+Why hume Redhat official use nahi karna hain.
+Kabhi RedHat official repostiroy m update software version nahi hain.
+or kabhi vo software hi nahi hain, Jo apko install krna hain.
+
+Humne /etc/yum.repos.d/nginx.repo
+nginx.repo add kiya jisse hum nginx install kr skte hain..
 
 
