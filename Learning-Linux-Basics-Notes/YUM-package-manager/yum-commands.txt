@@ -44,4 +44,11 @@ yum update
 without any argument
 
 ye command sabhi packages ko check karega jo update krna hain..
-dependency check karega.. jo dependent package update kr k liye
+dependency check karega.. jo dependent package update kr k liye.
+
+Feature	                    yum update          	yum upgrade
+Updates installed RPMs	          ✔	                    ✔
+Installs new dependencies	        ✔                  	  ✔
+Removes obsolete packages	        ❌	                  ✔
+More conservative	                ✔	                    ❌
+Better for production servers     ✔                    	Maybe
