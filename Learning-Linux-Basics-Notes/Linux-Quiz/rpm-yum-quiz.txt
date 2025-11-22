@@ -1,4 +1,89 @@
 Q1).Which of the following package managers would you use on this machine (centos-lab)?
 Ans: Centos makes use of RPM and YUM.
 
-Q2).
+Q2). Use an rpm command and find out the exact package name for wget installed in this server (centos-lab).
+Ans: Run: rpm -qa | grep wget
+[bob@centos-lab ~]$ rpm -qa | grep wget
+wget-1.21.1-8.el9.x86_64
+
+Q3). The package for the firefox browser has been downloaded under /home/bob in the centos-lab server.
+Try to install it using RPM.
+Ans: 
+cd /home/bob
+rpm -ivh firefox-128.6.0-1.el9.x86_64.rpm
+
+Q4). command to check packge is installed or not ?
+Ans:
+[bob@centos-lab ~]$ rpm -q firefox
+package firefox is not installed
+
+Q5). Let's use YUM to install the firefox on the centos-lab server.
+Ans: sudo yum install firefox -y 
+on the centos-lab server.
+
+[bob@centos-lab ~]$ yum install firefox
+Error: This command has to be run with superuser privileges (under the root user on most systems).
+[bob@centos-lab ~]$ sudo yum install firefox
+CentOS Stream 9 - BaseOS                      10 MB/s | 8.8 MB     00:00    
+CentOS Stream 9 - AppStream                  1.6 MB/s |  25 MB     00:16    
+CentOS Stream 9 - Extras packages             14 kB/s |  20 kB     00:01    
+Extra Packages for Enterprise Linux 9 - x86_  19 MB/s |  20 MB     00:01    
+Extra Packages for Enterprise Linux 9 openh2 3.6 kB/s | 2.5 kB     00:00    
+Extra Packages for Enterprise Linux 9 - Next 170 kB/s | 289 kB     00:01    
+Dependencies resolved.
+=============================================================================
+ Package                 Arch        Version            Repository      Size
+=============================================================================
+Installing:
+ firefox                 x86_64      140.5.0-1.el9      appstream      115 M
+Upgrading:
+ nspr                    x86_64      4.36.0-4.el9       appstream      133 k
+ nss                     x86_64      3.112.0-4.el9      appstream      722 k
+ nss-softokn             x86_64      3.112.0-4.el9      appstream      399 k
+ nss-softokn-freebl      x86_64      3.112.0-4.el9      appstream      413 k
+ nss-sysinit             x86_64      3.112.0-4.el9      appstream       18 k
+ nss-tools               x86_64      3.112.0-4.el9      appstream      446 k
+ nss-util                x86_64      3.112.0-4.el9      appstream       88 k
+Installing dependencies:
+ centos-indexhtml        noarch      9.3-1.el9          appstream      4.5 M
+ mozilla-filesystem      x86_64      1.9-30.el9         appstream      9.6 k
+ pciutils-libs           x86_64      3.7.0-7.el9        baseos          41 k
+
+Transaction Summary
+=============================================================================
+Install  4 Packages
+Upgrade  7 Packages
+
+Total download size: 121 M
+Is this ok [y/N]: 
+
+Q6).How many software repositories are configured for YUM in the centos-lab server?
+Ans: 6
+Run: sudo yum repolist and count the number of repos.
+[bob@centos-lab ~]$ yum repolist
+repo id             repo name
+appstream           CentOS Stream 9 - AppStream
+baseos              CentOS Stream 9 - BaseOS
+epel                Extra Packages for Enterprise Linux 9 - x86_64
+epel-cisco-openh264 Extra Packages for Enterprise Linux 9 openh264 (From Cisco) - x86_64
+epel-next           Extra Packages for Enterprise Linux 9 - Next - x86_64
+extras-common       CentOS Stream 9 - Extras packages
+
+Q7). Which package provides the tcpdump command on the centos-lab server?
+Ans: Run: - sudo yum provides tcpdump  
+tcpdump-14:4.99.0-6.el9.x86_64
+[bob@centos-lab ~]$ yum provide tcpdump
+No such command: provide. Please use /usr/bin/yum --help
+It could be a YUM plugin command, try: "yum install 'dnf-command(provide)'"
+[bob@centos-lab ~]$ yum provides tcpdump
+CentOS Stream 9 - BaseOS                     7.1 MB/s | 8.8 MB     00:01    
+CentOS Stream 9 - AppStream                  1.6 MB/s |  25 MB     00:16    
+CentOS Stream 9 - Extras packages             43 kB/s |  20 kB     00:00    
+Extra Packages for Enterprise Linux 9 - x86_ 2.1 MB/s |  20 MB     00:09    
+Extra Packages for Enterprise Linux 9 openh2 3.4 kB/s | 2.5 kB     00:00    
+Extra Packages for Enterprise Linux 9 - Next 329 kB/s | 289 kB     00:00    
+tcpdump-14:4.99.0-6.el9.x86_64 : A network traffic monitoring tool
+Repo        : appstream
+Matched from:
+Provide    : tcpdump = 14:4.99.0-6.el9
+
