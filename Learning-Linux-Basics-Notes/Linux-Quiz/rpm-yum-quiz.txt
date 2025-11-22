@@ -1,0 +1,4 @@
+Q1).Which of the following package managers would you use on this machine (centos-lab)?
+Ans: Centos makes use of RPM and YUM.
+
+Q2).
