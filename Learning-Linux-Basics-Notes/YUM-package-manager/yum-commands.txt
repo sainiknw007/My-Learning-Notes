@@ -1,0 +1,10 @@
+Yum commands:
+
+1). yum repolist
+list karega sabhi software repository jo system m added hain.
+
+2). yum provide command:
+Koe specific command k liye konsa package lagega/chahiye vo check krne k liye:
+
+Example: yum provide scp
+command(scp) as argument pass krte hain. 
