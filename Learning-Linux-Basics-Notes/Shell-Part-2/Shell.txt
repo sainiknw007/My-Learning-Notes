@@ -1,0 +1,31 @@
+Working with Shell Part-2
+----------------------------------------------------------------------------------------------------------------------------------------------
+Hum Learn karenge 
+1).Compressing and Archiving Files
+2).Searching and Extracting Data from files
+3).Labs: Compressing, Searching and Extracting Data
+4).Linux Text Editors
+5).Labs: Text Editors
+
+1). Compressing and Archiving Files:
+File archive krne k Pehle hum dekhte hain, file size kaise check krte hain.
+
+Viewing File Sizes: How to check size of a file in Linux ?
+Ans: 
+du command mtlb disk usage, jisse hum file ka size pata krte hain.
+
+1st Way). du -sk test.jpeg ----
+10000
+
+du -sk filename --> command file ka size show karta hain hain Kilobytes main
+
+2nd Way).du -sh filename
+-h mtlb human readable form.
+Example: 
+du -sh test.png
+98M test.png
+
+98Mb Mb m sshow karta hain.
+
+3rd Way). ls -lh test.jpeg
+-rw-rw-r-- 1 99M Mar 13 15:48 test.img
