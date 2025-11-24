@@ -1,0 +1,47 @@
+What is Compression ?
+Ans: Compression is a technique used to reduce the size of file.
+compression ek technique hain jisse hum file size reduce krte hain.
+
+commands are specially file ko compress krne k liye.
+
+bzip2
+gzip and 
+xz
+
+ye commands se hum jab compress krte hain, Compressed file ka size depends krta hain few factors par
+such as type of data being compressed.
+
+other factor jispar file size depend krta hain vo hain algorithm used by these commands and compression level used hua vo.
+
+ye command se hum jab compress krte ha to
+ye extension addkrta hain.
+
+.bz2
+.gz
+.xz
+
+compressed files ko uncompressed/extract krte hain commands se
+
+bunzip2
+gunzip
+unxz
+
+ye jaruri nahi hain ki hume ek compressed file ko uncompressed krne ka everytime.
+why 
+because we have tools
+jaise such as zcat,bzcat and xzcat
+
+example in picture.
+jissue hum compressed files ko read kr skte hain,..(mtlb without uncompressing)
+
+[~]$ zcat hostfile.txt.bz2
+127.0.0.1     localhost
+127.0.1.1     Minty-Bionic
+
+# The following lines are desirable for IPv6
+# capable hosts
+::1           ip6-localhost ip6-loopback
+fe00::0       ip6-localnet
+ff00::0       ip6-mcastprefix
+ff02::1       ip6-allnodes
+ff02::2       ip6-allrouters
