@@ -29,3 +29,48 @@ du -sh test.png
 
 3rd Way). ls -lh test.jpeg
 -rw-rw-r-- 1 99M Mar 13 15:48 test.img
+
+Archiving Files:
+Archiving Files:
+
+Let us now look at widely used utility called tar.
+Tar command se hum multiple files or directories k group ko ek single file m rakh deta hain like compress in windows .zip banata hain windows m vaise.
+compress mtlb file size reduce krke usko save krna.
+
+mtlb tar command hume data archieve krne k liye use hota hain.
+
+Tar --- full form bolo ya abbriviaton 
+Tape Archive.
+
+Files created with tar are often called tarballs.
+tar se hum jo files create krte hain usko kehte hain tarballs.
+
+
+tar commands m bahut option hain, we will se basic use case:
+
+tar command:
+
+tar -C ---> 
+C is used to create an archive.
+archieve create krne k liye
+
+tar -F
+F is used to specify the name of the tar file to be created.
+file name specify krne k liye use krte hain, jo tar file create krna hain.
+
+n command m hum files n directores dete jo sab archive krna hain.
+
+tar -tf test.tar 
+---------------------------------
+se hum test.tar file k andar ka contents dekhte hain 
+tar file m kon kon si files hain.
+
+TF option followed by tar file name is used to see the contents of the tarballs.
+
+tar -XF
+-xf flag tar file/tarballs m se content extract krne k liye use hota hain.
+
+
+-Z bhi use kr skte hain tar file ko compress krne k liye.
+
+Compression is a technique used to reduce the size consumed by a file or data set.
