@@ -1,0 +1,24 @@
+grep command:
+
+File k andar search krna hain kuch content to most popular command is grep.
+Grep is commonly used to print lines of a file matching a pattern.
+
+Grep hum koe pattern/keywork ko find krne k liye krte hain.
+
+Ek sample file hain: create a file and add karo manually.
+---------------------------------------------------------------------------------------------------
+Sample.txt
+
+This is the first line.
+Followed by the second line.
+And then the third line.
+The fourth line has CAPITAL LETTERS
+The fifth line does not want to be printed.
+---------------------------------------------------------------------------------------------------
+Now second word kaha kaha h fine kra hain, sample.txt file m..
+ye sab lines print karega jaha jaha par second hain.
+---------------------------------------------------------------------------------------------------
+grep second sample.txt   		--> ye find karega second keyword sample.txt file main... 
+Followed by the second line.
+---------------------------------------------------------------------------------------------------
+
