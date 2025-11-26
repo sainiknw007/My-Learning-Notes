@@ -43,6 +43,11 @@ find /home/michael -name city.txt
 find . -name city.txt
 . means current directory / current location, so find karegne current dirctoryd/current location main.
 
+find . -name "*.txt"   --> will find all txt files
+find . -name "*.sh"     --> will find all shell scripts.
+
+as there are many options you can check using man command
+man find
 
 
 
