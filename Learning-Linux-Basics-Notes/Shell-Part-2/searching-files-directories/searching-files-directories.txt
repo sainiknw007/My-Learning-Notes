@@ -1,1 +1,48 @@
 Searching for files and directories.
+2). Searching and extracting data from files:
+
+Linux par kam krte krte aapko 
+Kabhi apko files, directories search krna pad skta hain.
+command line se hum file directory search kr skte hain
+
+Example: Support apko city.txt file find/search krna hain.
+
+First command: 
+Run karo locate command with file name jo serach krna hain as arguments m dedo
+
+Example:
+
+locate city.txt
+ye sabhi path returns karega jaha jaha city.txt file hain
+ye Linux file system m koe bhi file find krna hain quickly you can use this locate command
+
+locate command mlocate.db database par depend karta hain, file name query krne k liye.
+
+yadi apne files recently create kiye hain, so locate command recent files ko 
+find/search nhi kr payga..
+
+because, DB has not been updated yet.
+
+Database ko manually update krne k liye, run the command:
+
+updated
+
+and then run the locate command again.
+
+Note: updated command will work with root user.
+
+find command:
+Ek way or hain file find krne ka, another way to search/find file is to make use of the find command.
+
+find command m directory name dete h jaha find krna hain, 
+File ko file name se search krna hain to 
+-name option use krna hain.
+
+command
+find /home/michael -name city.txt
+find . -name city.txt
+. means current directory / current location, so find karegne current dirctoryd/current location main.
+
+
+
+
