@@ -22,7 +22,7 @@ These rocky.repo or epel.repo contains url
 baseurl=https://mirror.centos.org/$releasever/BaseOS/x86_64/os/
 
 sudo yum list installed --> only show installed packages.
-sudo yum available ---> only show available packages in repo
+sudo yum lists available ---> only show available packages in repo
 sudo yum list updates   --> show packages that have update available
 
 Q4).Use an rpm command and find out the exact package name for wget installed in this server (centos-lab).
