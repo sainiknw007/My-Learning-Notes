@@ -19,3 +19,15 @@ dusra concept hain:
         issue bhi authentcation hota hain.
         Ye user ko programs and server k access k authentication k liye use hota hain.
 
+3). Network Security:
+Network Security use hoti hain access allow or access restrict krne k liye..
+hum external firewall par rely krne hain access allow or restrict krne k liye.
+Linux server par bhi network security set kr skte hain IPTables and Firewalld k user krke.
+
+4). SSH Hardening:
+SSH: SSH mtlb Secure Shell Linux system k remote access lene k use hota hain.(unsecure  network m bhi ssh se remote access kr skte hain) company m hamesha VPN network secure hota hain.
+SSH Hardening se authorized user ko hi access milega.
+
+
+
+
