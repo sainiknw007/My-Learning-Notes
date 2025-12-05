@@ -1,0 +1,243 @@
+here is the real, internal, step-by-step flow showing exactly how SSH, sudo, and login rely on PAM 
+(instead of doing authentication themselves).
+Ans:
+Real-Time Example: What happens when you SSH into a Linux server?
+
+Let’s say you run:
+
+ssh akhil@10.0.0.15
+
+Step-by-step behind the scenes
+1️⃣ SSHD accepts the connection
+
+sshd daemon receives your connection.
+
+It does not authenticate your password directly.
+
+Instead, it says: “I need PAM to authenticate this user.”
+
+2️⃣ SSHD loads its PAM service file
+
+SSHD loads:
+
+/etc/pam.d/sshd
+
+
+This file contains lines like:
+
+auth    required    pam_unix.so
+auth    required    pam_faillock.so
+account required    pam_access.so
+session required    pam_limits.so
+
+3️⃣ PAM Framework starts authentication
+
+PAM looks for all lines starting with:
+
+auth
+
+
+These are executed in the order shown.
+
+Example flow:
+
+Module	Purpose
+pam_faillock.so	checks if account is locked
+pam_unix.so	validates password
+pam_google_authenticator.so	optional MFA
+pam_sss.so	LDAP/AD auth
+4️⃣ Each PAM module runs
+
+PAM calls every module:
+
+pam_faillock.so → OK?
+pam_unix.so → Is password valid?
+pam_sss.so → LDAP OK?
+pam_google_authenticator.so → OTP OK?
+
+
+Each returns a status:
+
+Success
+
+Fail
+
+Ignore
+
+5️⃣ PAM decides whether authentication succeeded
+
+Based on module results + control flag:
+
+required
+
+requisite
+
+sufficient
+
+optional
+
+Example:
+
+auth required pam_unix.so
+
+
+If this fails → PAM returns failure → sshd denies login.
+
+6️⃣ If password is correct, PAM checks account rules
+
+Now PAM evaluates:
+
+account required pam_access.so
+account required pam_unix.so
+
+
+It checks:
+
+Is user expired?
+
+Is password expired?
+
+Is user allowed login at this time?
+
+Is login allowed from this terminal?
+
+7️⃣ If account is OK, PAM sets up the session
+
+Next, the session modules run:
+
+session required pam_limits.so
+session required pam_systemd.so
+session optional pam_motd.so
+
+
+They perform tasks like:
+
+Set ulimits (/etc/security/limits.conf)
+
+Create systemd session
+
+Show MOTD (Message of the Day)
+
+Mount home directories (AD/LDAP)
+
+8️⃣ PAM returns final success to SSHD
+
+If all modules succeed → PAM returns:
+
+PAM_SUCCESS
+
+
+→ SSHD finally logs you in!
+
+🔥 Real-Time Example: What happens when you run sudo?
+
+You run:
+
+sudo su -
+
+1️⃣ sudo loads:
+/etc/pam.d/sudo
+
+
+Typical file:
+
+auth       required     pam_unix.so
+account    required     pam_unix.so
+session    required     pam_limits.so
+
+2️⃣ PAM goes through auth modules
+
+Validates password.
+
+3️⃣ PAM checks account modules
+
+Is the user allowed to use sudo? Is password expired?
+
+4️⃣ PAM sets up session modules
+
+Loads environment, ulimits, logs the sudo action.
+
+5️⃣ PAM returns status to sudo
+
+If PAM_SUCCESS → sudo grants you root privileges.
+
+🔥 Real-Time Example: What happens when you login via console (login)
+
+You enter username + password in a Linux terminal.
+
+Program login loads:
+
+/etc/pam.d/login
+
+
+The same flow occurs:
+
+auth modules → check password, MFA, faillock
+
+account modules → check access rules
+
+password modules → enforce password change
+
+session modules → mount directories, show motd
+
+Finally, PAM returns success → login shell starts.
+
+🧠 So How Does PAM Actually Work Internally?
+
+Here is the general flow for ANY PAM-enabled program:
+
+Application (ssh/sudo/login)
+       |
+       v
+PAM Library (libpam)
+       |
+       v
+Load /etc/pam.d/<service>
+       |
+       v
+Process modules in order:
+    - auth
+    - account
+    - password
+    - session
+       |
+       v
+Combine module results using control flags
+       |
+       v
+Return PAM_SUCCESS or PAM_FAILURE
+       |
+       v
+Application grants/denies access
+
+🎯 Short Summary (Interview Ready)
+
+SSH, sudo, and login do NOT authenticate users.
+They simply call PAM.
+
+PAM works like this:
+
+User runs ssh/sudo/login
+
+Application calls PAM
+
+PAM loads /etc/pam.d/<service>
+
+PAM runs modules in order
+
+Each module checks specific rules
+
+PAM aggregates results
+
+Returns success/failure to application
+
+Application decides → login allowed or denied
+
+If you want, I can also give you:
+
+✅ A diagram of PAM flow
+✅ A real pam.d file analysis
+✅ A practical example: enabling 2FA via PAM
+✅ Common interview questions on PAM
+
+Just tell me!
