@@ -1,0 +1,21 @@
+Basic Security and Identifying File Types
+Creating Users and Groups
+Labs: Users and Group
+
+Managing File Permission and Ownership
+Labs: File Permission
+
+Special Directories and Files
+Labs: Special Directories and Files
+
+Security:
+Security in Linux ek vast topic hain, isme bahut se concepts involve hain.
+pehle concept hain
+1). Access Control: Mtlb username and password se authenticate karta hain who can access the linux server/system.
+                    Jiske user ko jo access h vo access kar skta hain.
+
+dusra concept hain:
+2). PAM: PAM mtlb Pluggable authentication model.
+        issue bhi authentcation hota hain.
+        Ye user ko programs and server k access k authentication k liye use hota hain.
+
