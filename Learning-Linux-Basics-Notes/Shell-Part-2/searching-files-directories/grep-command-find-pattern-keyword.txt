@@ -103,3 +103,46 @@ ye hume vo line dega jisme exam word nahi hain.
 output:
 grep examples
 -----------------------------------------------------------------------------------------------------------
+[~]$ cat premier-league-table.txt
+1 Arsenal
+2 Liverpool
+3 Chelsea
+4 Manchester City
+grep -A
+grep -A1 , 1 line after the matching line.
+
+
+[~]$ grep -A1 Arsenal premier-league-table.txt
+1 Arsenal
+2 Liverpool
+
+
+grep -B
+grep -B1
+B means before, 1 line before the matching line.
+
+[~]$ grep -B1 4 premier-league-table.txt
+3 Chelsea
+4 Manchester City
+
+A1 andn Ba k place par aap integer bhi use kar skte hain ,, utne line vo print karega after and before
+A and B ko combine bhi kar skte hain..
+------------------------------------------------------------------------------------------------------------
+grep -A1 -B1 ko combine bhi kar skte hain..
+
+grep -A1 -B1 का मतलब
+grep → किसी फाइल में text खोजने के लिए
+-A1 (After 1) → match होने वाली line के बाद 1 line दिखाओ
+-B1 (Before 1) → match होने वाली line के पहले 1 line दिखाओ
+
+grep -A1 -B1 Chelsea premier-league-table.txt
+
+2 Liverpool        ← Chelsea से पहले वाली line
+3 Chelsea          ← matched line
+4 Manchester City  ← Chelsea के बाद वाली line
+
+[~]$ grep -A1 -B1 Chelsea premier-league-table.txt
+2 Liverpool
+3 Chelsea
+4 Manchester City
+
