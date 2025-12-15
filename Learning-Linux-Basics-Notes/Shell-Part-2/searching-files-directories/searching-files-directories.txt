@@ -25,7 +25,7 @@ because, DB has not been updated yet.
 
 Database ko manually update krne k liye, run the command:
 
-updated
+updatedb             --> updatedb command
 
 and then run the locate command again.
 
