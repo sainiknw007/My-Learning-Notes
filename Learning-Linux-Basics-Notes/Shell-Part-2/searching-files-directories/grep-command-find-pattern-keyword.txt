@@ -18,7 +18,88 @@ The fifth line does not want to be printed.
 Now second word kaha kaha h fine kra hain, sample.txt file m..
 ye sab lines print karega jaha jaha par second hain.
 ---------------------------------------------------------------------------------------------------
-grep second sample.txt   		--> ye find karega second keyword sample.txt file main... 
+#grep second sample.txt   		--> ye find karega second keyword sample.txt file main... 
+output:
 Followed by the second line.
 ---------------------------------------------------------------------------------------------------
+grep command casesensitive hain...
+grep second sample.txt ---> second (small caps m diya hain so small caps m hi search karega)
+---------------------------------------------------------------------------------
+grep capital sample.txt
+par ye vo line find karega jisme,   capital hain (all small caps m hain)
+apne file main CAPITAL m hi capital..
 
+--------------------------------------------------------------------------------
+so case insensitive banane k liye, use karna hain.
+
+grep -i capital sample.txt
+output:
+The fourth line has CAPITAL LETTERS.
+
+------------------------------------------------------------------------------------
+and yadhi koe directory main recursively search karna hain ....so hum grep -r recursively use karenge...
+grep -r "third line" /home/michael
+
+ye command michael directory main, sabhi files m jaha jaha third line hain file name and line print karega
+i will search for keyword third line in whole michael directory, under all files in michael directory.
+example:
+grep -r "third line" /home/michael
+./sample.txt AND then the third line.
+
+sample.txt file and ye line hain usme third line keyword/string/pattern.
+-----------------------------------------------------------------------------------------------------------
+Print line of a file, that do not match pattern, vo line print karna hain 
+jisme pattern match nahi hona chahiye, uske liye hum 
+grep -v "printed" sample.txt
+
+-v use karnege...
+ye apna sample.txt file hain..
+Sample.txt
+
+This is the first line.
+Followed by the second line.
+And then the third line.
+The fourth line has CAPITAL LETTERS
+The fifth line does not want to be printed.
+
+--------------------------------------------------------------------------------------------------------------
+vo sab line ayy hain, jisme printed pattern/string nahi hain.
+
+grep -v "printed" sample.txt
+output:
+This is the first line.
+Followed by the second line.
+And then the third line.
+The fourth line has CAPITAL LETTERS
+
+--------------------------------------------------------------------------------------------------------------
+Q. Now ab main apse ek question puchta hu..
+cat sample.txt
+grep examples
+linux exam on 19th jan 2025
+-------------------------------------------------------------------------------------------------------------
+grep exam sample.txt
+output: ayya hain..
+grep examples
+linux exam on 19th jan 2025
+-------------------------------------------------------------------------------------------------------------
+ye sab line find kar raha/  sab line print kr raha jaha work exam hain..
+
+par apko bas vo line chahiye jisme "exam" string/pattern ho...
+uske liye ab us karna hain.. command
+grep -w exam sample.txt
+output:
+linux exam on 19th jan 2025.
+------------------------------------------------------------------------------------------------------------
+ab hume vo line find karna hain jisme exam word/string nahi hain..
+
+cat sample.txt
+grep examples
+linux exam on 19th jan 2025
+----------------
+
+grep -vw exam sample.txt
+ye hume vo line dega jisme exam word nahi hain.
+output:
+grep examples
+-----------------------------------------------------------------------------------------------------------
