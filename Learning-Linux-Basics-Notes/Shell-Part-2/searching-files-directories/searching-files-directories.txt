@@ -5,7 +5,7 @@ Linux par kam krte krte aapko
 Kabhi apko files, directories search krna pad skta hain.
 command line se hum file directory search kr skte hain
 
-Example: Support apko city.txt file find/search krna hain.
+Example: Suppose apko city.txt file find/search krna hain.
 
 First command: 
 Run karo locate command with file name jo serach krna hain as arguments m dedo
