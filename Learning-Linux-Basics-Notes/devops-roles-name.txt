@@ -1,0 +1,13 @@
+Roles:
+
+Linux Administrator
+System Engineer
+System administrator
+
+
+DevOps Engineer
+Cloud Engineer
+AWS Cloud Engineer
+Azure Cloud Engineer
+Platform Engineer
+SRE (Site Reliability Engineer)
