@@ -1,1 +1,35 @@
-IO-redirection
+IO-redirection:
+
+Kabhi kabhi error bhi aata hain.. wrong command or command failed.
+
+standard error: 
+standard error stream  hume error bhejta hain.
+
+IO redirection se hum standard input, standard output, standard error ko hum text file m redirect kr skte hain mtlb text file m le skte hain.
+----------------------------------------------------------------------------------------------------------------------------------------------
+mtlb command run karenge and uska output text file m lenge..
+
+ls -lrt
+du -h
+
+ye dono command ka output hum text file m le skte hain and send kar skte haain..
+----------------------------------------------------------------------------------------------------------------------------------------------
+Jo output m hume screen par print nahi krna hain
+Redirect standard output file m krne k liye:
+
+forward arrow uske bad file name use karenge..
+
+echo $SHELL > shell.text
+
+forward arrow kya karta hain, forward arrow shell.txt file na contect ko overwrite karega standard output se..
+
+-------------------------------------------------------------------------------------------------------------------------------
+support file shell.text m /bin/bash content already hain and hum overwrite nhi karna hain..
+
+so hum double forward arrow use kr skte hain..
+
+echo "This is the Bash Shell" >> shell.txt
+
+ye already exist txt file m append kar dega.. overwrite nahi karega..
+
+------------------
