@@ -1,4 +1,24 @@
 IO-redirection:
+------------------
+IO Redirections:
+
+
+Standards stream ka concept hota hain Linux main.:
+
+Standard Stream:
+
+three data streams Create hoti hain, jab hum Linux ka ek command run karte hain.
+
+STANDARD INPUT
+
+STANDARD OUTPUT
+
+STANDARD ERROR
+
+STANDARD INPUT: Stdin. standard input string, hain ye text as input accept karta hain.
+
+Standard output: stdout
+output aata hain hume command ko vo hume standard output stream deta hain.
 
 Kabhi kabhi error bhi aata hain.. wrong command or command failed.
 
@@ -17,19 +37,40 @@ ye dono command ka output hum text file m le skte hain and send kar skte haain..
 Jo output m hume screen par print nahi krna hain
 Redirect standard output file m krne k liye:
 
-forward arrow uske bad file name use karenge..
+forward arrow symbol uske bad file name use karenge..
 
 echo $SHELL > shell.text
 
-forward arrow kya karta hain, forward arrow shell.txt file na contect ko overwrite karega standard output se..
-
+forward arrow kya karta hain, forward arrow shell.txt file na content ko overwrite karega standard output stream se
 -------------------------------------------------------------------------------------------------------------------------------
 support file shell.text m /bin/bash content already hain and hum overwrite nhi karna hain..
 
 so hum double forward arrow use kr skte hain..
 
 echo "This is the Bash Shell" >> shell.txt
-
 ye already exist txt file m append kar dega.. overwrite nahi karega..
 
+cat shell.txt
+/bin/bash
+This is the Bash shell
 ------------------
+Suppose hum bas error msg redirect krna hain file main, ye error lena hain file main.
+so hume use karna parega number 2 followed by forward arrow and file name
+if the file does not exist, so vo new file create kar dega.
+file already exist hain vo file ko overwrite karega
+
+example: cat missing_file 2> error.txt
+cat error.txt
+cat: missing_file: No such file or directory
+------------------
+ab ap bologe ki mere pass file hain already, overwrite nahi krna hain..
+
+so hum double forward arrow use karenge right
+>>
+
+exmaple: cat missing_file 2>> shell.txt
+
+cat shell.txt
+/bin/bash
+This is the Bash shell.
+cat: missing_file: No such file or directory
