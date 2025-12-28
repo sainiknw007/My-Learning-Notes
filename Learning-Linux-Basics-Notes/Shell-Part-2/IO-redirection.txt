@@ -74,3 +74,23 @@ cat shell.txt
 /bin/bash
 This is the Bash shell.
 cat: missing_file: No such file or directory
+----------------------------------------------------------------------------error msg hume display nahi krna hain------------------------------
+cat missing_file 2> /dev/null
+
+Hume command execute karna hain par error print nahi karna hain screen par even if vo standard error generate karrta hain..
+to hum /dev/null ko redirect kar skte hain..
+
+/dev/null is called bit bucket / null device ek special device file
+error ko discard karna hain so hum us karenge /dev/null
+
+because hum /dev/null m kuch likh rahe to vo delete karta hain immediately
+or read kar rehae /dev/null ko bhi to vo return nothing kuch return nahi krega..
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+cat logfile.txt
+this is log file
+
+log file k content ko delete karna hain without deleting file..
+Clears the file without deleting it.
+
+cat /dev/null > logfile.txt
